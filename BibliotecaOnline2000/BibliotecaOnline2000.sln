@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaOnline2000", "BibliotecaOnline2000.csproj", "{EFB774C9-6DC5-4B7A-925D-05671ACC2B43}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alocacao De Carros", "..\Alocacao De Carros\Alocacao De Carros.csproj", "{26AE9145-4D9B-4C91-9A7F-AE62DD5CD1B6}"
 EndProject
 Global
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFB774C9-6DC5-4B7A-925D-05671ACC2B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB774C9-6DC5-4B7A-925D-05671ACC2B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB774C9-6DC5-4B7A-925D-05671ACC2B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB774C9-6DC5-4B7A-925D-05671ACC2B43}.Release|Any CPU.Build.0 = Release|Any CPU
 		{26AE9145-4D9B-4C91-9A7F-AE62DD5CD1B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{26AE9145-4D9B-4C91-9A7F-AE62DD5CD1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26AE9145-4D9B-4C91-9A7F-AE62DD5CD1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -20,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FE2B6863-1E76-4B75-AC24-C941A81982AC}
+		SolutionGuid = {82A25684-F80E-4392-B072-23C7458343BA}
 	EndGlobalSection
 EndGlobal
