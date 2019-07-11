@@ -109,7 +109,7 @@ namespace SistemaBibliotecaOnlineNasa3PONTOZERO
 
         }
         /// <summary>
-        /// Mostra Menu de Alocacao
+        /// Mostra Metodo de alocar livros.
         /// </summary>
         public static void AlocarUmLivro()
         {
@@ -142,6 +142,9 @@ namespace SistemaBibliotecaOnlineNasa3PONTOZERO
             }
         }
 
+        /// <summary>
+        /// Metodo para desalocar livros.
+        /// </summary>
         public static void DesalocarUmLivro()
         {
             MostrarMenuInicialLivros("Desalocar um Livro: ");
@@ -162,6 +165,10 @@ namespace SistemaBibliotecaOnlineNasa3PONTOZERO
 
         }
 
+        /// <summary>
+        /// MostrarMenuDosLivros
+        /// </summary>
+        /// <param name="operacao"></param>
         public static void MostrarMenuInicialLivros(string operacao)
         {
             Console.Clear();
