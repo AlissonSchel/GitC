@@ -16,6 +16,10 @@ namespace AdicionandoValoresEmUmaLista
             InsertRegistro(ref listaDeNome, ref ID);
 
             Console.ReadKey();
+
+            InsertRegistro(ref listaDeNome, ref ID);
+
+            Console.ReadKey();
         }
         /// <summary>
         /// Metodo que insere novos registros.
