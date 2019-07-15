@@ -14,9 +14,14 @@ namespace ListaBiEasy
 
             CarregaInformacoesEListaNaTela(ref listaDeNome);
 
-            PesquisaNaLista(ref listaDeNome, pID);
+            Console.ReadKey();
+
+            Console.WriteLine("Informe o ID do registro a ser pesquisado: ");
+
+            PesquisaNaLista(listaDeNome, Console.ReadLine());
 
             Console.ReadKey();
+
         }
         /// <summary>
         /// Metodo que carrega informações e lista na tela.
@@ -36,11 +41,10 @@ namespace ListaBiEasy
             }
         }
 
-        public static void PesquisaNaLista(ref string[,] arrayBi, string pID)
+        public static void PesquisaNaLista(string[,] arrayBi,string pID)
         {
             for (int i = 0; i < arrayBi.GetLength(0); i++)
             {
-                pID = Console.ReadLine();
                 if (arrayBi[i,0] == pID)
                 {
                     Console.WriteLine($"Informação escolhida: ID: {arrayBi[i,0]} - Nome{arrayBi[i,1]}");

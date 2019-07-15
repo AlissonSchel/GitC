@@ -11,7 +11,7 @@ namespace BeepTeste
     {
         static void Main(string[] args)
         {
-            #region notas
+            #region notas 3 oitavas
             var C1 = 130;
             var Csus1 = 138;
             var D1 = 146;
@@ -37,7 +37,26 @@ namespace BeepTeste
             var Asus3 = 932;
             var B3 = 987;
             #endregion
+            
+            // Riff 1
+            Console.Beep(B2, 800);
+            Console.Beep(D3, 800);
 
+            Console.Beep(D3, 400);
+            Console.Beep(E3, 400);
+            Console.Beep(E3, 800);
+
+            Console.Beep(G3, 200);
+            Console.Beep(Fsus3, 200);
+            Console.Beep(G3, 200);
+            Console.Beep(Fsus3, 200);
+            Console.Beep(G3, 200);
+            Console.Beep(Fsus3, 200);
+
+            Console.Beep(D3, 400);
+            Console.Beep(D3, 800);
+            Console.Beep(E3, 400);
+            Console.Beep(E3, 800);
 
             Console.Beep(B2, 800);
             Console.Beep(D3, 800);
@@ -58,7 +77,11 @@ namespace BeepTeste
             Console.Beep(E3, 400);
             Console.Beep(E3, 800);
 
+            //Riff 2
 
+            Console.Beep(B2,400);
+            Console.Beep(B2,400);
+            Console.Beep(D2,1000);
 
         }
     }
