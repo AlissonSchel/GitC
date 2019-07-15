@@ -83,16 +83,36 @@ namespace Alocacao_De_Carros
         /// </summary>
         /// <param name="nomeCarro">Nome do carro a ser pesquisado</param>
         /// <returns>Disponibilidade do carro</returns>
-        public static bool PesquisaCarroParaAlocacao(string nomeCarro)
+        public static bool? PesquisaCarroParaAlocacao(ref string nomeCarro)
         {
             for (int i = 0; i < basedeCarros.GetLength(0); i++)
             {
-                if (nomeCarro == basedeCarros[i, 0])
+                if (compararNomes(nomeCarro, basedeCarros[i, 0]))
                 {
                     return basedeCarros[i, 2] == "Sim";
                 }
             }
-            return false;
+            Console.Clear();
+            Console.WriteLine("Nenhum carro encontrado no sistema.\n");
+            Console.WriteLine("Deseja pesquisar novamente? Sim(1) | Não(0)");
+
+            int.TryParse(Console.ReadKey().KeyChar.ToString(), out int opcao);
+
+            if (opcao == 1)
+            {
+                Console.Clear();
+                MostrarListaDeCarros();
+                Console.WriteLine("Digite o nome do carro a ser pesquisado: ");
+                nomeCarro = Console.ReadLine();
+
+                return PesquisaCarroParaAlocacao(ref nomeCarro);
+            }
+            if (opcao == 0)
+            {
+                MenuPrincipal();
+            }
+
+            return null;
         }
 
         /// <summary>
@@ -105,19 +125,17 @@ namespace Alocacao_De_Carros
             MostrarListaDeCarros();
 
             var nomedoCarro = Console.ReadLine();
-            if (PesquisaCarroParaAlocacao(nomedoCarro))
+            var resultadoPesquisa = PesquisaCarroParaAlocacao(ref nomedoCarro);
+            if (resultadoPesquisa != null && resultadoPesquisa == true)
             {
                 Console.Clear();
                 MostrarBemVindo();
                 Console.WriteLine("Você deseja alocar este carro? para Sim(1) para Não(0)");
 
                 atualizarCarro(nomedoCarro, Console.ReadKey().KeyChar.ToString() == "1");
-
                 Console.Clear();
-                Console.WriteLine("Carro alterado com sucesso!\n");
-
+                Console.WriteLine("Carro alocado com sucesso!\n");
                 MostrarListaDeCarros();
-
                 Console.ReadKey();
             }
         }
@@ -132,19 +150,17 @@ namespace Alocacao_De_Carros
             MostrarListaDeCarros();
 
             var nomedoCarro = Console.ReadLine();
-            if (!PesquisaCarroParaAlocacao(nomedoCarro))
+            var resultadoPesquisa = PesquisaCarroParaAlocacao(ref nomedoCarro);
+            if (resultadoPesquisa != null && resultadoPesquisa == false)
             {
                 Console.Clear();
                 MostrarBemVindo();
                 Console.WriteLine("Você deseja desalocar este carro? para Sim(1) para Não(0)");
 
                 atualizarCarro(nomedoCarro, Console.ReadKey().KeyChar.ToString() == "0");
-
                 Console.Clear();
-                Console.WriteLine("Carro alterado com sucesso!\n");
-
+                Console.WriteLine("Carro desalocado com sucesso!\n");
                 MostrarListaDeCarros();
-
                 Console.ReadKey();
             }
         }
@@ -157,7 +173,7 @@ namespace Alocacao_De_Carros
         {
             for (int i = 0; i < basedeCarros.GetLength(0); i++)
             {
-                if (nomeCarro == basedeCarros[i, 0])
+                if (compararNomes(nomeCarro,basedeCarros[i,0]))
                 {
                     basedeCarros[i, 2] = alocar ? "Não" : "Sim";
                 }
@@ -176,6 +192,7 @@ namespace Alocacao_De_Carros
             Console.WriteLine($"Menu - {operacao}");
             Console.WriteLine("Digite o carro que gostaria de realizar a operação: \n");
         }
+
         /// <summary>
         /// Mostra a lista de carros
         /// </summary>
@@ -188,5 +205,18 @@ namespace Alocacao_De_Carros
             }
         }
 
+        /// <summary>
+        /// Compara dois nomes ignorando espaços vazios
+        /// </summary>
+        /// <param name="primeiro">Primeiro nome</param>
+        /// <param name="segundo">Segundo nome</param>
+        /// <returns>Retorna se os nomes são iguais</returns>
+        public static bool compararNomes(string primeiro, string segundo)
+        {
+            if (primeiro.ToLower().Replace(" ", "") == segundo.ToLower().Replace(" ", ""))
+                return true;
+
+            return false;
+        }
     }
 }
