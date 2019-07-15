@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EFB774C9-6DC5-4B7A-925D-05671ACC2B43}</ProjectGuid>
+    <ProjectGuid>{EE2AEA58-1453-453C-843B-6F8C694EAD42}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BibliotecaOnline2000</RootNamespace>
-    <AssemblyName>BibliotecaOnline2000</AssemblyName>
+    <RootNamespace>BeepStairway</RootNamespace>
+    <AssemblyName>BeepStairway</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
