@@ -38,8 +38,6 @@ namespace FearOfTheDarkBeep
                 int B2 = 987;
             #endregion
 
-            /*
-
             #region Intro
             Console.Beep(D2,300);
             Console.Beep(D2,300);
@@ -151,7 +149,6 @@ namespace FearOfTheDarkBeep
 
             #endregion
 
-            */
 
             #region Riff 1
 
@@ -165,9 +162,23 @@ namespace FearOfTheDarkBeep
             Console.Beep(C2, 400);
 
             Console.Beep(G1, 200);
-            Console.Beep(C2, 200);
+            Console.Beep(C2, 400);
             Console.Beep(G1, 200);
-            Console.Beep(B1, 200);
+            Console.Beep(B1, 600);
+
+            Console.Beep(C2, 400);
+            Console.Beep(C2, 400);
+            Console.Beep(F2, 200);
+            Console.Beep(D2, 600);
+
+            Console.Beep(A1, 200);
+            Console.Beep(D2, 400);
+            Console.Beep(E2, 200);
+            Console.Beep(F2, 400);
+            Console.Beep(G2, 400);
+            Console.Beep(F2, 400);
+            Console.Beep(E2, 200);
+            Console.Beep(C2, 800);
 
             #endregion
         }
