@@ -10,7 +10,7 @@ namespace FearOfTheDarkBeep
     {
         static void Main(string[] args)
         {
-            #region notas
+            #region Notas
                 int C1 = 261;
                 int Csus1 = 277;
                 int D1 = 293;
@@ -37,7 +37,10 @@ namespace FearOfTheDarkBeep
                 int Asus2 = 932;
                 int B2 = 987;
             #endregion
-            
+
+
+
+            #region Intro
             Console.Beep(D2,300);
             Console.Beep(D2,300);
             Console.Beep(A1,300);
@@ -111,6 +114,7 @@ namespace FearOfTheDarkBeep
             Console.Beep(Asus1, 300);
             Console.Beep(Fsus1, 300);
 
+            
             Console.Beep(Gsus1, 300);
             Console.Beep(Gsus1, 300);
             Console.Beep(Dsus1, 300);
@@ -127,6 +131,31 @@ namespace FearOfTheDarkBeep
             Console.Beep(Gsus1, 300);
             Console.Beep(Asus1, 300);
             Console.Beep(Gsus1, 300);
+
+            Console.Beep(E1, 300);
+            Console.Beep(E1, 300);
+            Console.Beep(C1,300);
+            Console.Beep(C1,300);
+            Console.Beep(F1, 300);
+            Console.Beep(F1, 300);
+            Console.Beep(G1, 300);
+            Console.Beep(G1, 300);
+            Console.Beep(A1, 300);
+            Console.Beep(A1, 300);
+            Console.Beep(G1, 300);
+            Console.Beep(G1, 300);
+            Console.Beep(F1, 300);
+            Console.Beep(F1, 300);
+            Console.Beep(A1, 500);
+            Console.Beep(F1, 1200);
+
+            #endregion
+
+            #region Riff 1
+            
+                
+
+            #endregion
         }
     }
 }
