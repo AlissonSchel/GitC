@@ -48,6 +48,8 @@ namespace FearOfTheDarkBeep
                 {
                     case "1":
                         {
+                            Console.Clear();
+                            Console.WriteLine("***Tocando Fear of the beep***");
                             //Inicio da Intro
                             Console.Beep(D2, 900);
                             Console.Beep(A1, 300);
@@ -231,9 +233,160 @@ namespace FearOfTheDarkBeep
                             Console.Beep(C2, 1200);
                         }
                         break;
-                    case "2": { } break;
-                    case "3": { } break;
-                    case "4": { Environment.Exit(0); } break;
+                    case "2": {
+                            Console.Clear();
+                            Console.WriteLine("***Tocando Beep on the water***");
+                            Console.Beep(D1,550);
+                            Thread.Sleep(20);
+                            Console.Beep(F1,550);
+                            Thread.Sleep(20);
+                            Console.Beep(G1,800);
+                            Thread.Sleep(280);
+
+                            Console.Beep(D1, 550);
+                            Thread.Sleep(20);
+                            Console.Beep(F1, 550);
+                            Thread.Sleep(20);
+                            Console.Beep(Gsus1, 200);
+                            Thread.Sleep(20);
+                            Console.Beep(G1, 800);
+
+                            Thread.Sleep(200);
+
+                            Console.Beep(D1, 550);
+                            Thread.Sleep(20);
+                            Console.Beep(F1, 550);
+                            Thread.Sleep(20);
+                            Console.Beep(G1, 650);
+                            Thread.Sleep(280);
+                            Console.Beep(F1, 550);
+                            Thread.Sleep(10);
+                            Console.Beep(D1, 800);
+                            Thread.Sleep(20);
+
+                        } break;
+                    case "3": {
+                            Console.Clear();
+                            Console.WriteLine("***Tocando Come as you beep***");
+                            Console.Beep(E1,300);
+                            Console.Beep(E1,300);
+                            Console.Beep(F1,300);
+                            Console.Beep(Fsus1,600);
+
+                            Console.Beep(A1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(A1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(F1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(B1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(E1, 600);
+
+                            // Divisor 
+
+                            Console.Beep(B1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(F1, 300);
+                            Console.Beep(Fsus1, 600);
+
+                            Console.Beep(A1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(A1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(F1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(B1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(E1, 600);
+
+                            Console.Beep(B1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(F1, 300);
+                            Console.Beep(Fsus1, 600);
+
+                            Console.Beep(A1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(A1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(F1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(B1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(E1, 600);
+
+                            Console.Beep(B1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(F1, 300);
+                            Console.Beep(Fsus1, 600);
+
+                            Console.Beep(A1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(A1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(Fsus1, 300);
+                            Console.Beep(F1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(B1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(E1, 600);
+                            Thread.Sleep(600);
+                        } break;
+                    case "4": {
+                            Console.Clear();
+                            Console.WriteLine("***Tocando Highway to beep***");
+                            Console.Beep(A1,280);
+                            Console.Beep(A1,280);
+                            Console.Beep(A1,280);
+                            Thread.Sleep(1200);
+
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(G1, 280);
+                            Thread.Sleep(1200);
+
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(G1, 280);
+                            Thread.Sleep(320);
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(Fsus1, 250);
+                            Console.Beep(G1, 280);
+                            Console.Beep(Fsus1, 280);
+                            Thread.Sleep(360);
+                            Console.Beep(A1,280);
+                            Console.Beep(A1,280);
+
+                            Thread.Sleep(1200);
+
+                            Console.Beep(A1, 280);
+                            Console.Beep(A1, 280);
+                            Console.Beep(A1, 280);
+                            Thread.Sleep(1200);
+
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(G1, 280);
+                            Thread.Sleep(1200);
+
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(G1, 280);
+                            Thread.Sleep(320);
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(Fsus1, 250);
+                            Console.Beep(G1, 280);
+                            Console.Beep(Fsus1, 280);
+                            Thread.Sleep(360);
+                            Console.Beep(A1, 280);
+                            Console.Beep(A1, 280);
+
+
+                        }  break;
+                    case "5": { Environment.Exit(0); } break;
                     default:
                         { Console.WriteLine("Opção inválida, tente novamente."); }
                         break;
@@ -247,8 +400,11 @@ namespace FearOfTheDarkBeep
             Console.Clear();
 
             Console.WriteLine("Escolha uma opção: \n");
-            Console.WriteLine("1 - Fear Of The Beep");
-            Console.WriteLine("4 - Sair");
+            Console.WriteLine("1 - Fear of the beep");
+            Console.WriteLine("2 - Beep on the water");
+            Console.WriteLine("3 - Come as you beep");
+            Console.WriteLine("4 - Highway to beep");
+            Console.WriteLine("5 - Sair");
 
             return Console.ReadLine();
         }
