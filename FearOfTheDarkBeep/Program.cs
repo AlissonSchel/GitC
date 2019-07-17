@@ -388,7 +388,7 @@ namespace FearOfTheDarkBeep
                         }  break;
                     case "5": {
                             Console.Clear();
-                            Console.WriteLine("***Tocando Beepnoid***");
+                            Console.WriteLine("***Tocando Paranoid***");
                             Console.Beep(Asus1, 50);
                             Console.Beep(B1, 500);
                             Console.Beep(Asus1, 50);
@@ -426,7 +426,18 @@ namespace FearOfTheDarkBeep
                             Thread.Sleep(600);
 
                         } break;
-                    case "6": { Environment.Exit(0); } break;
+                    case "6": {
+                            Console.Clear();
+                            Console.WriteLine("***Tocando Dance of the death***");
+                            Console.Beep(E2, 1000);
+                            Console.Beep(F2, 1000);
+                            Console.Beep(Fsus2, 600);
+                            Console.Beep(A2, 300);
+                            Console.Beep(Fsus2, 600);
+                            Console.Beep(E2, 1000);
+
+                        } break;
+                    case "7": { Environment.Exit(0); } break;
                     default:
                         { Console.WriteLine("Opção inválida, tente novamente."); }
                         break;
@@ -444,7 +455,8 @@ namespace FearOfTheDarkBeep
             Console.WriteLine("2 - Beep on the water");
             Console.WriteLine("3 - Come as you beep");
             Console.WriteLine("4 - Highway to beep");
-            Console.WriteLine("5 - Sair");
+            Console.WriteLine("5 - Paranoid");
+            Console.WriteLine("7 - Sair");
 
             return Console.ReadLine();
         }
