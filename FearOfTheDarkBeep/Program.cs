@@ -386,7 +386,47 @@ namespace FearOfTheDarkBeep
 
 
                         }  break;
-                    case "5": { Environment.Exit(0); } break;
+                    case "5": {
+                            Console.Clear();
+                            Console.WriteLine("***Tocando Beepnoid***");
+                            Console.Beep(Asus1, 50);
+                            Console.Beep(B1, 500);
+                            Console.Beep(Asus1, 50);
+                            Console.Beep(B1, 500);
+                            Console.Beep(Asus1, 50);
+                            Console.Beep(B1, 500);
+                            Thread.Sleep(200);
+
+                            Console.Beep(Asus1, 100);
+                            Console.Beep(B1, 100);
+                            Console.Beep(D2, 100);
+                            Console.Beep(E2, 100);
+                            Console.Beep(Asus1, 100);
+                            Console.Beep(B1, 100);
+                            Console.Beep(D2, 100);
+                            Console.Beep(E2, 100);
+
+                            Console.Beep(Asus1, 50);
+                            Console.Beep(B1, 500);
+                            Console.Beep(Asus1, 50);
+                            Console.Beep(B1, 500);
+                            Console.Beep(Asus1, 50);
+                            Console.Beep(B1, 500);
+                            Thread.Sleep(200);
+
+                            Console.Beep(Asus1, 100);
+                            Console.Beep(B1, 100);
+                            Console.Beep(D2, 100);
+                            Console.Beep(E2, 100);
+                            Console.Beep(Asus1, 100);
+                            Console.Beep(B1, 100);
+                            Console.Beep(D2, 100);
+                            Console.Beep(E2, 100);
+
+                            Thread.Sleep(600);
+
+                        } break;
+                    case "6": { Environment.Exit(0); } break;
                     default:
                         { Console.WriteLine("Opção inválida, tente novamente."); }
                         break;
