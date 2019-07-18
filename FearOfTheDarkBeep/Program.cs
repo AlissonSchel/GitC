@@ -37,9 +37,23 @@ namespace FearOfTheDarkBeep
             int A2 = 880;
             int Asus2 = 932;
             int B2 = 987;
+
+            int C3 = 1047;
+            int Csus3 = 1109;
+            int D3 = 1175;
+            int Dsus3 = 1245;
+            int E3 = 1319;
+            int F3 = 1397;
+            int Fsus3 = 1480;
+            int G3 = 1568;
+            int Gsus3 = 1661;
+            int A3 = 1760;
+            int Asus3 = 1865;
+            int B3 = 1976;
+
             #endregion
 
-            
+
             var opcao = ShowMenu();
             var sairTeclado = false;
 
@@ -485,6 +499,13 @@ namespace FearOfTheDarkBeep
 
                         } break;
                     case "7": {
+                            Console.Beep(E2,800);
+                            Thread.Sleep(400);
+                            Console.Beep(E2,400);
+
+                            Console.Beep(G2,800);
+                        } break;
+                    case "8": {
                             Console.WriteLine("Pressione . para sair do teclado virtual.");
                             while (sairTeclado == false)
                             {
@@ -521,7 +542,7 @@ namespace FearOfTheDarkBeep
                         }
                             sairTeclado = false;
                         } break;
-                    case "8": { Environment.Exit(0); } break;
+                    case "9": { Environment.Exit(0); } break;
                     default:
                         { Console.WriteLine("Opção inválida, tente novamente."); }
                         break;
