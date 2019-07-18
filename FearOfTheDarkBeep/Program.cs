@@ -485,33 +485,41 @@ namespace FearOfTheDarkBeep
 
                         } break;
                     case "7": {
+                            Console.WriteLine("Pressione . para sair do teclado virtual.");
                             while (sairTeclado == false)
                             {
                                 Console.Clear();
                                 var tecla = Console.ReadKey().KeyChar.ToString();
                                 switch (tecla)
                                 {
-                                    case "a": { Console.Beep(C1, 500); } break;
-                                    case "w": { Console.Beep(Csus1, 500); } break;
-                                    case "s": { Console.Beep(D1, 500); } break;
-                                    case "e": { Console.Beep(Dsus1, 500); } break;
-                                    case "d": { Console.Beep(E1, 500);} break;
-                                    case "f": { Console.Beep(F1, 500); } break;
-                                    case "t": { Console.Beep(Fsus1, 500); } break;
-                                    case "g": { Console.Beep(G1, 500);  } break;
-                                    case "y": { Console.Beep(Gsus1, 500);  } break;
-                                    case "h": { Console.Beep(A1, 500);  } break;
-                                    case "u": { Console.Beep(Asus1, 500);  } break;
-                                    case "j": { Console.Beep(B1, 500);  } break;
-                                    case "k": { Console.Beep(C2,500); } break;
-                                    case "o": { Console.Beep(Csus2,500); } break;
-                                    case "l": { Console.Beep(D2,500); } break;
-                                    case "p": { Console.Beep(Dsus2,500); } break;
-                                    case "ç": { Console.Beep(E2,500); } break;
-                                    case "]": { Console.Beep(F2,500); } break;
-                                    case ".": { sairTeclado = true; }break;
-                                }   
+                                    case "q": { Console.Beep(C1, 500); } break;
+                                    case "2": { Console.Beep(Csus1, 500); } break;
+                                    case "w": { Console.Beep(D1, 500); } break;
+                                    case "3": { Console.Beep(Dsus1, 500); } break;
+                                    case "e": { Console.Beep(E1, 500);} break;
+                                    case "r": { Console.Beep(F1, 500); } break;
+                                    case "5": { Console.Beep(Fsus1, 500); } break;
+                                    case "t": { Console.Beep(G1, 500);  } break;
+                                    case "6": { Console.Beep(Gsus1, 500);  } break;
+                                    case "y": { Console.Beep(A1, 500);  } break;
+                                    case "7": { Console.Beep(Asus1, 500);  } break;
+                                    case "u": { Console.Beep(B1, 500);  } break;
+                                    case "z": { Console.Beep(C2,500); } break;
+                                    case "s": { Console.Beep(Csus2,500); } break;
+                                    case "x": { Console.Beep(D2,500); } break;
+                                    case "d": { Console.Beep(Dsus2,500); } break;
+                                    case "c": { Console.Beep(E2,500); } break;
+                                    case "v": { Console.Beep(F2,500); } break;
+                                    case "g": { Console.Beep(Fsus2,500); } break;
+                                    case "b": { Console.Beep(G2,500); } break;
+                                    case "h": { Console.Beep(Gsus2,500); } break;
+                                    case "n": { Console.Beep(A2,500); } break;
+                                    case "j": { Console.Beep(Asus2,500); } break;
+                                    case "m": { Console.Beep(B2,500); } break;
+                                    case "'": { sairTeclado = true; }break;
+                                }
                         }
+                            sairTeclado = false;
                         } break;
                     case "8": { Environment.Exit(0); } break;
                     default:
@@ -533,7 +541,7 @@ namespace FearOfTheDarkBeep
             Console.WriteLine("4 - Highway to beep");
             Console.WriteLine("5 - Paranoid");
             Console.WriteLine("6 - Sunshine of your Beep");
-            Console.WriteLine("7 - Projeto Teclado");
+            Console.WriteLine("7 - Projeto");
             Console.WriteLine("8 - Sair");
 
             return Console.ReadLine();
