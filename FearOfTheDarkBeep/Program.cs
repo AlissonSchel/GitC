@@ -41,13 +41,13 @@ namespace FearOfTheDarkBeep
 
             
             var opcao = ShowMenu();
+            var sairTeclado = false;
 
             while (true)
             {
                 switch (opcao)
                 {
-                    case "1":
-                        {
+                    case "1": {
                             Console.Clear();
                             Console.WriteLine("***Tocando Fear of the beep***");
                             //Inicio da Intro
@@ -231,16 +231,15 @@ namespace FearOfTheDarkBeep
                             Console.Beep(F2, 400);
                             Console.Beep(E2, 200);
                             Console.Beep(C2, 1200);
-                        }
-                        break;
+                        } break;
                     case "2": {
                             Console.Clear();
                             Console.WriteLine("***Tocando Beep on the water***");
-                            Console.Beep(D1,550);
+                            Console.Beep(D1, 550);
                             Thread.Sleep(20);
-                            Console.Beep(F1,550);
+                            Console.Beep(F1, 550);
                             Thread.Sleep(20);
-                            Console.Beep(G1,800);
+                            Console.Beep(G1, 800);
                             Thread.Sleep(280);
 
                             Console.Beep(D1, 550);
@@ -268,10 +267,10 @@ namespace FearOfTheDarkBeep
                     case "3": {
                             Console.Clear();
                             Console.WriteLine("***Tocando Come as you beep***");
-                            Console.Beep(E1,300);
-                            Console.Beep(E1,300);
-                            Console.Beep(F1,300);
-                            Console.Beep(Fsus1,600);
+                            Console.Beep(E1, 300);
+                            Console.Beep(E1, 300);
+                            Console.Beep(F1, 300);
+                            Console.Beep(Fsus1, 600);
 
                             Console.Beep(A1, 300);
                             Console.Beep(Fsus1, 300);
@@ -338,30 +337,6 @@ namespace FearOfTheDarkBeep
                     case "4": {
                             Console.Clear();
                             Console.WriteLine("***Tocando Highway to beep***");
-                            Console.Beep(A1,280);
-                            Console.Beep(A1,280);
-                            Console.Beep(A1,280);
-                            Thread.Sleep(1200);
-
-                            Console.Beep(Fsus1, 280);
-                            Console.Beep(Fsus1, 280);
-                            Console.Beep(G1, 280);
-                            Thread.Sleep(1200);
-
-                            Console.Beep(Fsus1, 280);
-                            Console.Beep(Fsus1, 280);
-                            Console.Beep(G1, 280);
-                            Thread.Sleep(320);
-                            Console.Beep(Fsus1, 280);
-                            Console.Beep(Fsus1, 250);
-                            Console.Beep(G1, 280);
-                            Console.Beep(Fsus1, 280);
-                            Thread.Sleep(360);
-                            Console.Beep(A1,280);
-                            Console.Beep(A1,280);
-
-                            Thread.Sleep(1200);
-
                             Console.Beep(A1, 280);
                             Console.Beep(A1, 280);
                             Console.Beep(A1, 280);
@@ -384,60 +359,161 @@ namespace FearOfTheDarkBeep
                             Console.Beep(A1, 280);
                             Console.Beep(A1, 280);
 
+                            Thread.Sleep(1200);
 
-                        }  break;
+                            Console.Beep(A1, 280);
+                            Console.Beep(A1, 280);
+                            Console.Beep(A1, 280);
+                            Thread.Sleep(1200);
+
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(G1, 280);
+                            Thread.Sleep(1200);
+
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(G1, 280);
+                            Thread.Sleep(320);
+                            Console.Beep(Fsus1, 280);
+                            Console.Beep(Fsus1, 250);
+                            Console.Beep(G1, 280);
+                            Console.Beep(Fsus1, 280);
+                            Thread.Sleep(360);
+                            Console.Beep(A1, 280);
+                            Console.Beep(A1, 280);
+
+
+                        } break;
                     case "5": {
                             Console.Clear();
                             Console.WriteLine("***Tocando Paranoid***");
-                            Console.Beep(Asus1, 50);
+                            Console.Beep(Asus1, 100);
                             Console.Beep(B1, 500);
-                            Console.Beep(Asus1, 50);
+                            Console.Beep(Asus1, 100);
                             Console.Beep(B1, 500);
-                            Console.Beep(Asus1, 50);
+                            Console.Beep(Asus1, 100);
                             Console.Beep(B1, 500);
                             Thread.Sleep(200);
 
-                            Console.Beep(Asus1, 100);
-                            Console.Beep(B1, 100);
-                            Console.Beep(D2, 100);
-                            Console.Beep(E2, 100);
-                            Console.Beep(Asus1, 100);
-                            Console.Beep(B1, 100);
-                            Console.Beep(D2, 100);
-                            Console.Beep(E2, 100);
+                            Console.Beep(Asus1, 200);
+                            Console.Beep(B1, 200);
+                            Console.Beep(D2, 200);
+                            Console.Beep(E2, 200);
+                            Console.Beep(Asus1, 200);
+                            Console.Beep(B1, 200);
+                            Console.Beep(D2, 200);
+                            Console.Beep(E2, 200);
 
-                            Console.Beep(Asus1, 50);
+                            Console.Beep(Asus1, 100);
                             Console.Beep(B1, 500);
-                            Console.Beep(Asus1, 50);
+                            Console.Beep(Asus1, 100);
                             Console.Beep(B1, 500);
-                            Console.Beep(Asus1, 50);
+                            Console.Beep(Asus1, 100);
                             Console.Beep(B1, 500);
                             Thread.Sleep(200);
 
-                            Console.Beep(Asus1, 100);
-                            Console.Beep(B1, 100);
-                            Console.Beep(D2, 100);
-                            Console.Beep(E2, 100);
-                            Console.Beep(Asus1, 100);
-                            Console.Beep(B1, 100);
-                            Console.Beep(D2, 100);
-                            Console.Beep(E2, 100);
+                            Console.Beep(Asus1, 200);
+                            Console.Beep(B1, 200);
+                            Console.Beep(D2, 200);
+                            Console.Beep(E2, 200);
+                            Console.Beep(Asus1, 200);
+                            Console.Beep(B1, 200);
+                            Console.Beep(D2, 200);
+                            Console.Beep(E2, 200);
 
                             Thread.Sleep(600);
 
                         } break;
                     case "6": {
                             Console.Clear();
-                            Console.WriteLine("***Tocando Dance of the death***");
-                            Console.Beep(E2, 1000);
-                            Console.Beep(F2, 1000);
-                            Console.Beep(Fsus2, 600);
-                            Console.Beep(A2, 300);
-                            Console.Beep(Fsus2, 600);
-                            Console.Beep(E2, 1000);
+                            Console.WriteLine("***Tocando Sunshine of your Beep**");
+                            Console.Beep(D2, 300);
+                            Console.Beep(D2, 300);
+                            Console.Beep(C2, 300);
+                            Console.Beep(D2, 300);
+                            Thread.Sleep(300);
+
+                            Console.Beep(B1, 300);
+                            Thread.Sleep(300);
+                            Console.Beep(Asus1, 300);
+                            Thread.Sleep(300);
+                            Console.Beep(A1, 300);
+                            Thread.Sleep(300);
+
+                            Console.Beep(D1, 300);
+                            Console.Beep(F1, 600);
+                            Console.Beep(D1, 300);
+
+                            Thread.Sleep(300);
+
+                            Console.Beep(D2, 300);
+                            Console.Beep(D2, 300);
+                            Console.Beep(C2, 300);
+                            Console.Beep(D2, 300);
+                            Thread.Sleep(300);
+
+                            Console.Beep(B1, 300);
+                            Thread.Sleep(300);
+                            Console.Beep(Asus1, 300);
+                            Thread.Sleep(300);
+                            Console.Beep(A1, 300);
+                            Thread.Sleep(300);
+
+                            Console.Beep(D1, 300);
+                            Console.Beep(F1, 600);
+                            Console.Beep(D1, 300);
+
+                            Thread.Sleep(300);
+
+                            Console.Beep(D2, 300);
+                            Console.Beep(D2, 300);
+                            Console.Beep(C2, 300);
+                            Console.Beep(D2, 300);
+                            Thread.Sleep(300);
+
+                            Console.Beep(B1, 300);
+                            Thread.Sleep(300);
+                            Console.Beep(Asus1, 300);
+                            Thread.Sleep(300);
+                            Console.Beep(A1, 300);
+                            Thread.Sleep(300);
+
+                            Console.Beep(D2, 300);
+                            Console.Beep(F2, 600);
+                            Console.Beep(D2, 600);
 
                         } break;
-                    case "7": { Environment.Exit(0); } break;
+                    case "7": {
+                            while (sairTeclado == false)
+                            {
+                                Console.Clear();
+                                var tecla = Console.ReadKey().KeyChar.ToString();
+                                switch (tecla)
+                                {
+                                    case "a": { Console.Beep(C1, 500); } break;
+                                    case "w": { Console.Beep(Csus1, 500); } break;
+                                    case "s": { Console.Beep(D1, 500); } break;
+                                    case "e": { Console.Beep(Dsus1, 500); } break;
+                                    case "d": { Console.Beep(E1, 500);} break;
+                                    case "f": { Console.Beep(F1, 500); } break;
+                                    case "t": { Console.Beep(Fsus1, 500); } break;
+                                    case "g": { Console.Beep(G1, 500);  } break;
+                                    case "y": { Console.Beep(Gsus1, 500);  } break;
+                                    case "h": { Console.Beep(A1, 500);  } break;
+                                    case "u": { Console.Beep(Asus1, 500);  } break;
+                                    case "j": { Console.Beep(B1, 500);  } break;
+                                    case "k": { Console.Beep(C2,500); } break;
+                                    case "o": { Console.Beep(Csus2,500); } break;
+                                    case "l": { Console.Beep(D2,500); } break;
+                                    case "p": { Console.Beep(Dsus2,500); } break;
+                                    case "ç": { Console.Beep(E2,500); } break;
+                                    case "]": { Console.Beep(F2,500); } break;
+                                    case ".": { sairTeclado = true; }break;
+                                }   
+                        }
+                        } break;
+                    case "8": { Environment.Exit(0); } break;
                     default:
                         { Console.WriteLine("Opção inválida, tente novamente."); }
                         break;
@@ -456,7 +532,9 @@ namespace FearOfTheDarkBeep
             Console.WriteLine("3 - Come as you beep");
             Console.WriteLine("4 - Highway to beep");
             Console.WriteLine("5 - Paranoid");
-            Console.WriteLine("7 - Sair");
+            Console.WriteLine("6 - Sunshine of your Beep");
+            Console.WriteLine("7 - Projeto Teclado");
+            Console.WriteLine("8 - Sair");
 
             return Console.ReadLine();
         }
