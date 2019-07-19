@@ -500,10 +500,36 @@ namespace FearOfTheDarkBeep
                         } break;
                     case "7": {
                             Console.Beep(E2,800);
-                            Thread.Sleep(400);
+                            Thread.Sleep(200);
                             Console.Beep(E2,400);
 
-                            Console.Beep(G2,800);
+                            Console.Beep(G2,400);
+                            Console.Beep(E2, 400);
+                            Console.Beep(D2, 400);
+                            Console.Beep(C2, 800);
+                            Console.Beep(B1, 800);
+
+                            Console.Beep(E2, 800);
+                            Thread.Sleep(200);
+                            Console.Beep(E2, 400);
+
+                            Console.Beep(G2, 400);
+                            Console.Beep(E2, 400);
+                            Console.Beep(D2, 400);
+                            Console.Beep(C2, 800);
+                            Console.Beep(B1, 800);
+
+                            Console.Beep(E2, 800);
+                            Thread.Sleep(200);
+                            Console.Beep(E2, 400);
+
+                            Console.Beep(G2, 400);
+                            Console.Beep(E2, 400);
+                            Console.Beep(D2, 400);
+                            Console.Beep(C2, 400);
+                            Console.Beep(D2, 400);
+                            Console.Beep(C2, 400);
+                            Console.Beep(B1, 800);
                         } break;
                     case "8": {
                             Console.WriteLine("Pressione . para sair do teclado virtual.");
