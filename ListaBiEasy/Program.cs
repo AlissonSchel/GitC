@@ -47,7 +47,7 @@ namespace ListaBiEasy
             {
                 if (arrayBi[i,0] == pID)
                 {
-                    Console.WriteLine($"Informação escolhida: ID: {arrayBi[i,0]} - Nome{arrayBi[i,1]}");
+                    Console.WriteLine($"Informação escolhida: ID: {arrayBi[i,0]} | Nome{arrayBi[i,1]}");
                     return;
                 }
             }
