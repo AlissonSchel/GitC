@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CalculadoraConsole.Calculadora
+namespace CalculadoraClass
 {
     public class Calcular
     {
@@ -51,7 +51,7 @@ namespace CalculadoraConsole.Calculadora
 
         public double CalcularRaioCirculo(double valorArea)
         {
-            double resultado = Math.Sqrt(valorArea/3.14);
+            double resultado = Math.Sqrt(valorArea / 3.14);
 
             return resultado;
         }

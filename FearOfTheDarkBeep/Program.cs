@@ -46,7 +46,7 @@ namespace FearOfTheDarkBeep
                         } break;
                     case "7": {
                             Console.Clear();
-                            musicas.Misterio();
+                            musicas.SevenNationArmy();
                         } break;
                     case "8": {
                             musicas.Teclado();
@@ -71,8 +71,9 @@ namespace FearOfTheDarkBeep
             Console.WriteLine("4 - Highway to beep");
             Console.WriteLine("5 - Paranoid");
             Console.WriteLine("6 - Sunshine of your Beep");
-            Console.WriteLine("7 - Projeto");
-            Console.WriteLine("8 - Sair");
+            Console.WriteLine("7 - SevenNationArmy()");
+            Console.WriteLine("8 - Projeto");
+            Console.WriteLine("9 - Sair");
 
             return Console.ReadLine();
         }

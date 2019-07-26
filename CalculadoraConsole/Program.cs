@@ -11,12 +11,7 @@ namespace CalculadoraConsole
     {
         static void Main(string[] args)
         {
-            var Calcula = new Calcular();
 
-            while (true)
-            {
-                Calcula.Calculadora();
-            } 
         }
     }
 }

@@ -8,6 +8,9 @@ namespace Estacionamento.Classes
 {
     class ClasseEstacionamento
     {
+        /// <summary>
+        /// Menu Inicial que inicia o programa
+        /// </summary>
         public void MenuInicial()
         {
             string[,] carros = new string [1,4];
@@ -35,6 +38,10 @@ namespace Estacionamento.Classes
             }
         }
 
+        /// <summary>
+        /// Adiciona carros estacionados no sistema
+        /// </summary>
+        /// <param name="carros">Banco de dados de carros</param>
         public void AdicionarCarros(ref string[,] carros)
         {
             AumentaLista(ref carros);
@@ -72,6 +79,10 @@ namespace Estacionamento.Classes
             }
         }
 
+        /// <summary>
+        /// Mostra uma lista com carros estacionados.
+        /// </summary>
+        /// <param name="carros">Banco de dados de carros</param>
         public void ListarCarros(string[,] carros)
         {
             Console.Clear();
@@ -87,6 +98,10 @@ namespace Estacionamento.Classes
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// Mostra uma lista de histórico de carros que sairam do estacionamento.
+        /// </summary>
+        /// <param name="carros">Banco de dados de carros</param>
         public void HistoricoDeSaida(string[,] carros)
         {
             Console.Clear();
@@ -102,6 +117,10 @@ namespace Estacionamento.Classes
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// Excluir carros do sistema dando a saida do estacionamento
+        /// </summary>
+        /// <param name="carros"></param>
         public void ExcluirAlunos(string[,] carros)
         {
             Console.Clear();
@@ -126,7 +145,12 @@ namespace Estacionamento.Classes
             Console.WriteLine("Saída realizada com sucesso!");
             Console.ReadKey();
         }
-            public static void AumentaLista(ref string[,] listaCarros)
+
+        /// <summary>
+        /// Aumenta tamanho da lista dinamicamente
+        /// </summary>
+        /// <param name="listaCarros">Banco de dados de carros</param>
+        public static void AumentaLista(ref string[,] listaCarros)
         {
             var limiteLista = true;
 

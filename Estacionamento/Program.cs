@@ -12,7 +12,6 @@ namespace Estacionamento
         static void Main(string[] args)
         {
             var classEstacionamento = new ClasseEstacionamento();
-
             classEstacionamento.MenuInicial();
         }
     }

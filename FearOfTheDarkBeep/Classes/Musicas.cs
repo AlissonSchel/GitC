@@ -14,7 +14,7 @@ namespace FearOfTheDarkBeep.Classes
         int C1 = 261;
         int Csus1 = 277;
         int D1 = 293;
-        int Dsus1 = 311;
+        int Dsus1 = 311;  
         int E1 = 329;
         int F1 = 349;
         int Fsus1 = 370;
@@ -493,7 +493,7 @@ namespace FearOfTheDarkBeep.Classes
             Console.Beep(D2, 600);
         }
 
-        public void Misterio()
+        public void SevenNationArmy()
         {
             Console.Beep(E2, 800);
             Thread.Sleep(200);
@@ -527,6 +527,7 @@ namespace FearOfTheDarkBeep.Classes
             Console.Beep(C2, 400);
             Console.Beep(B1, 800);
         }
+
         public void Teclado()
         {
             var sairTeclado = false;
