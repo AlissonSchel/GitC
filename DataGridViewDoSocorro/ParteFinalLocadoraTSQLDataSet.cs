@@ -1,4 +1,6 @@
-﻿namespace DataGridViewDoSocorro
+﻿using System;
+
+namespace DataGridViewDoSocorro
 {
 
 
@@ -10,9 +12,14 @@
     }
 }
 
-namespace DataGridViewDoSocorro.ParteFinalLocadoraTSQLDataSetTableAdapters {
-    
-    
-    public partial class ClientesTableAdapter {
+namespace DataGridViewDoSocorro.ParteFinalLocadoraTSQLDataSetTableAdapters
+{
+    partial class UsuariosTableAdapter
+    {
+
+    }
+
+    public partial class ClientesTableAdapter
+    {
     }
 }

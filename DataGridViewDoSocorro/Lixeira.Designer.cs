@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.restaurarComando = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataTable1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.parteFinalLocadoraTSQLDataSet = new DataGridViewDoSocorro.ParteFinalLocadoraTSQLDataSet();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -37,9 +40,6 @@
             this.carrosTableAdapter1 = new DataGridViewDoSocorro.ParteFinalLocadoraTSQLDataSetTableAdapters.CarrosTableAdapter();
             this.clientesTableAdapter1 = new DataGridViewDoSocorro.ParteFinalLocadoraTSQLDataSetTableAdapters.ClientesTableAdapter();
             this.usuariosTableAdapter1 = new DataGridViewDoSocorro.ParteFinalLocadoraTSQLDataSetTableAdapters.UsuariosTableAdapter();
-            this.restaurarComando = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parteFinalLocadoraTSQLDataSet)).BeginInit();
@@ -66,6 +66,35 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            // 
+            // restaurarComando
+            // 
+            this.restaurarComando.DataPropertyName = "restaurarComando";
+            this.restaurarComando.HeaderText = "Restaurar";
+            this.restaurarComando.MinimumWidth = 6;
+            this.restaurarComando.Name = "restaurarComando";
+            this.restaurarComando.ReadOnly = true;
+            this.restaurarComando.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.restaurarComando.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.restaurarComando.Width = 125;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Tabela";
+            this.Column1.HeaderText = "Tabela";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
             // 
             // dataTable1BindingSource1
             // 
@@ -98,41 +127,14 @@
             // 
             this.usuariosTableAdapter1.ClearBeforeFill = true;
             // 
-            // restaurarComando
-            // 
-            this.restaurarComando.DataPropertyName = "restaurarComando";
-            this.restaurarComando.HeaderText = "Restaurar";
-            this.restaurarComando.MinimumWidth = 6;
-            this.restaurarComando.Name = "restaurarComando";
-            this.restaurarComando.ReadOnly = true;
-            this.restaurarComando.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.restaurarComando.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.restaurarComando.Width = 125;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Tabela";
-            this.Column1.HeaderText = "Tabela";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
             // Lixeira
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(127)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(22)))), ((int)(((byte)(64)))));
             this.Name = "Lixeira";
             this.Text = "Lixeira";
             this.Load += new System.EventHandler(this.Lixeira_Load);

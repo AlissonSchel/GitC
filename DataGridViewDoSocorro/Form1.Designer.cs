@@ -32,6 +32,7 @@
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.deleteCommand = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuIncDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,8 +43,8 @@
             this.parteFinalLocadoraTSQLDataSet = new DataGridViewDoSocorro.ParteFinalLocadoraTSQLDataSet();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnCarros = new System.Windows.Forms.Button();
-            this.clientesTableAdapter = new DataGridViewDoSocorro.ParteFinalLocadoraTSQLDataSetTableAdapters.ClientesTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
+            this.clientesTableAdapter = new DataGridViewDoSocorro.ParteFinalLocadoraTSQLDataSetTableAdapters.ClientesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parteFinalLocadoraTSQLDataSet)).BeginInit();
@@ -53,12 +54,16 @@
             // 
             this.btnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.btnAdicionar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnAdicionar.FlatAppearance.BorderSize = 5;
+            this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionar.Location = new System.Drawing.Point(12, 12);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(93, 72);
+            this.btnAdicionar.Size = new System.Drawing.Size(92, 72);
             this.btnAdicionar.TabIndex = 0;
             this.btnAdicionar.Text = "Adicionar Clientes";
-            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.UseVisualStyleBackColor = false;
             this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
             // dataGridView1
@@ -66,9 +71,11 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(8)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.deleteCommand,
+            this.Editar,
             this.idDataGridViewTextBoxColumn,
             this.clienteDataGridViewTextBoxColumn,
             this.usuIncDataGridViewTextBoxColumn,
@@ -76,6 +83,7 @@
             this.datIncDataGridViewTextBoxColumn,
             this.datAltDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.clientesBindingSource;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(8)))));
             this.dataGridView1.Location = new System.Drawing.Point(12, 90);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -93,6 +101,16 @@
             this.deleteCommand.Name = "deleteCommand";
             this.deleteCommand.ReadOnly = true;
             this.deleteCommand.Width = 125;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.MinimumWidth = 6;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Text = "Editar";
+            this.Editar.UseColumnTextForButtonValue = true;
+            this.Editar.Width = 125;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -162,52 +180,68 @@
             // 
             this.btnClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnClientes.FlatAppearance.BorderSize = 5;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Location = new System.Drawing.Point(310, 12);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(93, 72);
+            this.btnClientes.Size = new System.Drawing.Size(92, 72);
             this.btnClientes.TabIndex = 0;
             this.btnClientes.Text = "Usuários";
-            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.UseVisualStyleBackColor = false;
             this.btnClientes.Click += new System.EventHandler(this.BtnUsuarios_Click);
             // 
             // btnCarros
             // 
             this.btnCarros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCarros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.btnCarros.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnCarros.FlatAppearance.BorderSize = 5;
+            this.btnCarros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarros.Location = new System.Drawing.Point(409, 12);
             this.btnCarros.Name = "btnCarros";
-            this.btnCarros.Size = new System.Drawing.Size(93, 72);
+            this.btnCarros.Size = new System.Drawing.Size(92, 72);
             this.btnCarros.TabIndex = 0;
             this.btnCarros.Text = "Carros";
-            this.btnCarros.UseVisualStyleBackColor = true;
+            this.btnCarros.UseVisualStyleBackColor = false;
             this.btnCarros.Click += new System.EventHandler(this.BtnCarros_Click);
-            // 
-            // clientesTableAdapter
-            // 
-            this.clientesTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.button1.FlatAppearance.BorderSize = 5;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(695, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 72);
+            this.button1.Size = new System.Drawing.Size(92, 72);
             this.button1.TabIndex = 0;
             this.button1.Text = "Lixeira";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.BtnLixeira_Click);
+            // 
+            // clientesTableAdapter
+            // 
+            this.clientesTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(120)))), ((int)(((byte)(21)))));
+            this.ClientSize = new System.Drawing.Size(799, 446);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCarros);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnAdicionar);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(22)))), ((int)(((byte)(64)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -227,14 +261,15 @@
         private ParteFinalLocadoraTSQLDataSetTableAdapters.ClientesTableAdapter clientesTableAdapter;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnCarros;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewButtonColumn deleteCommand;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuIncDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuAltDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datIncDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datAltDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button1;
     }
 }
 

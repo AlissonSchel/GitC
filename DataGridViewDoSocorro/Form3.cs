@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataGridViewDoSocorro.Edicao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +37,18 @@ namespace DataGridViewDoSocorro
                     this.usuariosTableAdapter.CustomQuery(parteFinalLocadoraTSQLDataSet.Usuarios);
                 }
             break;
+                case 1:
+                    {
+                        frmEdicaoUsuarios editUsuario = new frmEdicaoUsuarios();
+                        editUsuario.UsuariosRow = userSelect;
+                        editUsuario.ShowDialog();
+                    } break;
             }
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

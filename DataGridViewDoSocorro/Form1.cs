@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DataGridViewDoSocorro.Adicionar;
+using DataGridViewDoSocorro.Edicao;
+using System;
 using System.Windows.Forms;
 
 namespace DataGridViewDoSocorro
@@ -25,7 +20,11 @@ namespace DataGridViewDoSocorro
 
         private void BtnAdicionar_Click(object sender, EventArgs e)
         {
-            
+            frmAddCliente frmNovoCliente = new frmAddCliente();
+
+            frmNovoCliente.ShowDialog();
+
+            this.clientesTableAdapter.CustomQuery(this.parteFinalLocadoraTSQLDataSet.Clientes);
         }
 
         private void BtnCarros_Click(object sender, EventArgs e)
@@ -48,12 +47,19 @@ namespace DataGridViewDoSocorro
 
             switch (e.ColumnIndex)
             {
-            case 0:
-                {
-                    this.clientesTableAdapter.SetNaoAtivoQuery(clientSelect.Id);
-                    this.clientesTableAdapter.CustomQuery(parteFinalLocadoraTSQLDataSet.Clientes);
-                }
-            break;
+                case 0:
+                    {
+                        this.clientesTableAdapter.SetNaoAtivoQuery(clientSelect.Id);
+                        this.clientesTableAdapter.CustomQuery(parteFinalLocadoraTSQLDataSet.Clientes);
+                    }
+                    break;
+                case 1:
+                    {
+                        frmEdicaoClientes editCliente = new frmEdicaoClientes();
+                        editCliente.ClientesRow = clientSelect;
+                        editCliente.ShowDialog();
+                    }
+                    break;
             }
         }
         private void BtnLixeira_Click(object sender, EventArgs e)

@@ -93,7 +93,15 @@ SELECT Id, Nome, Observacao, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM Carros W
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SetAtivoQuery" Modifier="Public" Name="SetAtivoQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SetAtivoQuery">
+              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="ParteFinalLocadoraTSQL.dbo.Carros" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Id, Nome, Observacao, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM dbo.Carros</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SetAtivoQuery" Modifier="Public" Name="SetAtivoQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SetAtivoQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[Carros] SET [Ativo] = 1 where (Id = @Id)</CommandText>
@@ -103,7 +111,7 @@ SELECT Id, Nome, Observacao, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM Carros W
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SetNaoAtivoQuery" Modifier="Public" Name="SetNaoAtivoQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SetNaoAtivoQuery">
+              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SetNaoAtivoQuery" Modifier="Public" Name="SetNaoAtivoQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SetNaoAtivoQuery">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[Carros] SET Ativo = 0 WHERE ([Id] = @Original_Id)</CommandText>
@@ -196,6 +204,26 @@ WHERE  (Ativo = 1)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="ParteFinalLocadoraTSQL.dbo.Clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Cliente, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM dbo.Clientes WHERE Ativo = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertCliente" Modifier="Public" Name="InsertCliente" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="InsertCliente">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO Clientes
+                  (Cliente)
+VALUES (@Cliente)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Cliente" ColumnName="Cliente" DataSourceName="ParteFinalLocadoraTSQL.dbo.Clientes" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@Cliente" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Cliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
               <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="ParteFinalLocadoraTSQL.dbo.Clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="QueryInativos" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="QueryInativos" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="QueryInativos">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -216,7 +244,7 @@ WHERE  (Ativo = 0)</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SetNaoAtivoQuery" Modifier="Public" Name="SetNaoAtivoQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SetNaoAtivoQuery">
+              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SetNaoAtivoQuery" Modifier="Public" Name="SetNaoAtivoQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="SetNaoAtivoQuery">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[Clientes] SET Ativo = 0 WHERE ([Id] = @Original_Id)</CommandText>
@@ -390,6 +418,14 @@ SELECT Id, Nome, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM Usuarios WHERE (Id =
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="ParteFinalLocadoraTSQL.dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Id, Nome, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM dbo.Usuarios WHERE Ativo = 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SetAtivoQuery" Modifier="Public" Name="SetAtivoQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SetAtivoQuery">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -400,7 +436,7 @@ SELECT Id, Nome, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM Usuarios WHERE (Id =
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SetNaoAtivoQuery" Modifier="Public" Name="SetNaoAtivoQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SetNaoAtivoQuery">
+              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SetNaoAtivoQuery" Modifier="Public" Name="SetNaoAtivoQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="SetNaoAtivoQuery">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[Usuarios] SET Ativo = 0 WHERE ([Id] = @Original_Id)</CommandText>
@@ -409,6 +445,21 @@ SELECT Id, Nome, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM Usuarios WHERE (Id =
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ParteFinalLocadoraTSQLConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE Usuarios
+SET          Nome = @Nome, UsuAlt = @UsuAlt, DatAlt = @DatAlt
+WHERE  (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Nome" ColumnName="Nome" DataSourceName="ParteFinalLocadoraTSQL.dbo.Usuarios" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@Nome" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Nome" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="UsuAlt" ColumnName="UsuAlt" DataSourceName="ParteFinalLocadoraTSQL.dbo.Usuarios" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@UsuAlt" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="UsuAlt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DatAlt" ColumnName="DatAlt" DataSourceName="ParteFinalLocadoraTSQL.dbo.Usuarios" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@DatAlt" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="DatAlt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="ParteFinalLocadoraTSQL.dbo.Usuarios" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
@@ -447,7 +498,7 @@ WHERE  (Ativo = 0)) TEMP</CommandText>
   <xs:element name="ParteFinalLocadoraTSQLDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ParteFinalLocadoraTSQLDataSet" msprop:Generator_UserDSName="ParteFinalLocadoraTSQLDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Carros" msprop:Generator_TableClassName="CarrosDataTable" msprop:Generator_TableVarName="tableCarros" msprop:Generator_RowChangedName="CarrosRowChanged" msprop:Generator_TablePropName="Carros" msprop:Generator_RowDeletingName="CarrosRowDeleting" msprop:Generator_RowChangingName="CarrosRowChanging" msprop:Generator_RowEvHandlerName="CarrosRowChangeEventHandler" msprop:Generator_RowDeletedName="CarrosRowDeleted" msprop:Generator_RowClassName="CarrosRow" msprop:Generator_UserTableName="Carros" msprop:Generator_RowEvArgName="CarrosRowChangeEvent">
+        <xs:element name="Carros" msprop:Generator_TableClassName="CarrosDataTable" msprop:Generator_TableVarName="tableCarros" msprop:Generator_TablePropName="Carros" msprop:Generator_RowDeletingName="CarrosRowDeleting" msprop:Generator_RowChangingName="CarrosRowChanging" msprop:Generator_RowEvHandlerName="CarrosRowChangeEventHandler" msprop:Generator_RowDeletedName="CarrosRowDeleted" msprop:Generator_UserTableName="Carros" msprop:Generator_RowChangedName="CarrosRowChanged" msprop:Generator_RowEvArgName="CarrosRowChangeEvent" msprop:Generator_RowClassName="CarrosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -474,7 +525,7 @@ WHERE  (Ativo = 0)) TEMP</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_RowClassName="ClientesRow" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowEvArgName="ClientesRowChangeEvent">
+        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_RowEvArgName="ClientesRowChangeEvent" msprop:Generator_RowClassName="ClientesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -486,8 +537,8 @@ WHERE  (Ativo = 0)) TEMP</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Ativo" msprop:Generator_ColumnVarNameInTable="columnAtivo" msprop:Generator_ColumnPropNameInRow="Ativo" msprop:Generator_ColumnPropNameInTable="AtivoColumn" msprop:Generator_UserColumnName="Ativo" type="xs:boolean" />
-              <xs:element name="UsuInc" msprop:Generator_ColumnVarNameInTable="columnUsuInc" msprop:Generator_ColumnPropNameInRow="UsuInc" msprop:Generator_ColumnPropNameInTable="UsuIncColumn" msprop:Generator_UserColumnName="UsuInc" type="xs:int" />
-              <xs:element name="UsuAlt" msprop:Generator_ColumnVarNameInTable="columnUsuAlt" msprop:Generator_ColumnPropNameInRow="UsuAlt" msprop:Generator_ColumnPropNameInTable="UsuAltColumn" msprop:Generator_UserColumnName="UsuAlt" type="xs:int" />
+              <xs:element name="UsuInc" msprop:Generator_ColumnVarNameInTable="columnUsuInc" msprop:Generator_ColumnPropNameInRow="UsuInc" msprop:Generator_ColumnPropNameInTable="UsuIncColumn" msprop:Generator_UserColumnName="UsuInc" type="xs:int" default="2" />
+              <xs:element name="UsuAlt" msprop:Generator_ColumnVarNameInTable="columnUsuAlt" msprop:Generator_ColumnPropNameInRow="UsuAlt" msprop:Generator_ColumnPropNameInTable="UsuAltColumn" msprop:Generator_UserColumnName="UsuAlt" type="xs:int" default="2" />
               <xs:element name="DatInc" msprop:Generator_ColumnVarNameInTable="columnDatInc" msprop:Generator_ColumnPropNameInRow="DatInc" msprop:Generator_ColumnPropNameInTable="DatIncColumn" msprop:Generator_UserColumnName="DatInc" type="xs:dateTime" />
               <xs:element name="DatAlt" msprop:Generator_ColumnVarNameInTable="columnDatAlt" msprop:Generator_ColumnPropNameInRow="DatAlt" msprop:Generator_ColumnPropNameInTable="DatAltColumn" msprop:Generator_UserColumnName="DatAlt" type="xs:dateTime" />
               <xs:element name="DeletCommand" msprop:Generator_ColumnVarNameInTable="columnDeletCommand" msprop:Generator_ColumnPropNameInRow="DeletCommand" msprop:Generator_ColumnPropNameInTable="DeletCommandColumn" msprop:Generator_UserColumnName="DeletCommand" type="xs:string" default="Deletar" minOccurs="0" />
@@ -495,7 +546,7 @@ WHERE  (Ativo = 0)) TEMP</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Estoque" msprop:Generator_TableClassName="EstoqueDataTable" msprop:Generator_TableVarName="tableEstoque" msprop:Generator_RowChangedName="EstoqueRowChanged" msprop:Generator_TablePropName="Estoque" msprop:Generator_RowDeletingName="EstoqueRowDeleting" msprop:Generator_RowChangingName="EstoqueRowChanging" msprop:Generator_RowEvHandlerName="EstoqueRowChangeEventHandler" msprop:Generator_RowDeletedName="EstoqueRowDeleted" msprop:Generator_RowClassName="EstoqueRow" msprop:Generator_UserTableName="Estoque" msprop:Generator_RowEvArgName="EstoqueRowChangeEvent">
+        <xs:element name="Estoque" msprop:Generator_TableClassName="EstoqueDataTable" msprop:Generator_TableVarName="tableEstoque" msprop:Generator_TablePropName="Estoque" msprop:Generator_RowDeletingName="EstoqueRowDeleting" msprop:Generator_RowChangingName="EstoqueRowChanging" msprop:Generator_RowEvHandlerName="EstoqueRowChangeEventHandler" msprop:Generator_RowDeletedName="EstoqueRowDeleted" msprop:Generator_UserTableName="Estoque" msprop:Generator_RowChangedName="EstoqueRowChanged" msprop:Generator_RowEvArgName="EstoqueRowChangeEvent" msprop:Generator_RowClassName="EstoqueRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Carro" msprop:Generator_ColumnVarNameInTable="columnCarro" msprop:Generator_ColumnPropNameInRow="Carro" msprop:Generator_ColumnPropNameInTable="CarroColumn" msprop:Generator_UserColumnName="Carro" type="xs:int" />
@@ -503,7 +554,7 @@ WHERE  (Ativo = 0)) TEMP</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Locacao" msprop:Generator_TableClassName="LocacaoDataTable" msprop:Generator_TableVarName="tableLocacao" msprop:Generator_RowChangedName="LocacaoRowChanged" msprop:Generator_TablePropName="Locacao" msprop:Generator_RowDeletingName="LocacaoRowDeleting" msprop:Generator_RowChangingName="LocacaoRowChanging" msprop:Generator_RowEvHandlerName="LocacaoRowChangeEventHandler" msprop:Generator_RowDeletedName="LocacaoRowDeleted" msprop:Generator_RowClassName="LocacaoRow" msprop:Generator_UserTableName="Locacao" msprop:Generator_RowEvArgName="LocacaoRowChangeEvent">
+        <xs:element name="Locacao" msprop:Generator_TableClassName="LocacaoDataTable" msprop:Generator_TableVarName="tableLocacao" msprop:Generator_TablePropName="Locacao" msprop:Generator_RowDeletingName="LocacaoRowDeleting" msprop:Generator_RowChangingName="LocacaoRowChanging" msprop:Generator_RowEvHandlerName="LocacaoRowChangeEventHandler" msprop:Generator_RowDeletedName="LocacaoRowDeleted" msprop:Generator_UserTableName="Locacao" msprop:Generator_RowChangedName="LocacaoRowChanged" msprop:Generator_RowEvArgName="LocacaoRowChangeEvent" msprop:Generator_RowClassName="LocacaoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -513,7 +564,7 @@ WHERE  (Ativo = 0)) TEMP</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_RowClassName="UsuariosRow" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent">
+        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent" msprop:Generator_RowClassName="UsuariosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -533,7 +584,7 @@ WHERE  (Ativo = 0)) TEMP</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Tabela" msdata:ReadOnly="true" msdata:Caption="clientes" msprop:Generator_ColumnVarNameInTable="columnTabela" msprop:Generator_ColumnPropNameInRow="Tabela" msprop:Generator_ColumnPropNameInTable="TabelaColumn" msprop:Generator_UserColumnName="Tabela" minOccurs="0">
@@ -569,13 +620,13 @@ WHERE  (Ativo = 0)) TEMP</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Carros_To_UsuarioAlt" msdata:parent="Usuarios" msdata:child="Carros" msdata:parentkey="Id" msdata:childkey="UsuAlt" msprop:Generator_UserChildTable="Carros" msprop:Generator_ChildPropName="GetCarrosRowsByFK_Carros_To_UsuarioAlt" msprop:Generator_UserRelationName="FK_Carros_To_UsuarioAlt" msprop:Generator_ParentPropName="UsuariosRowByFK_Carros_To_UsuarioAlt" msprop:Generator_RelationVarName="relationFK_Carros_To_UsuarioAlt" msprop:Generator_UserParentTable="Usuarios" />
-      <msdata:Relationship name="FK_Carros_To_UsuarioInc" msdata:parent="Usuarios" msdata:child="Carros" msdata:parentkey="Id" msdata:childkey="UsuInc" msprop:Generator_UserChildTable="Carros" msprop:Generator_ChildPropName="GetCarrosRowsByFK_Carros_To_UsuarioInc" msprop:Generator_UserRelationName="FK_Carros_To_UsuarioInc" msprop:Generator_ParentPropName="UsuariosRowByFK_Carros_To_UsuarioInc" msprop:Generator_RelationVarName="relationFK_Carros_To_UsuarioInc" msprop:Generator_UserParentTable="Usuarios" />
-      <msdata:Relationship name="FK_Clientes_To_UsuarioAlt" msdata:parent="Usuarios" msdata:child="Clientes" msdata:parentkey="Id" msdata:childkey="UsuAlt" msprop:Generator_UserChildTable="Clientes" msprop:Generator_ChildPropName="GetClientesRowsByFK_Clientes_To_UsuarioAlt" msprop:Generator_UserRelationName="FK_Clientes_To_UsuarioAlt" msprop:Generator_ParentPropName="UsuariosRowByFK_Clientes_To_UsuarioAlt" msprop:Generator_RelationVarName="relationFK_Clientes_To_UsuarioAlt" msprop:Generator_UserParentTable="Usuarios" />
-      <msdata:Relationship name="FK_Clientes_To_UsuarioInc" msdata:parent="Usuarios" msdata:child="Clientes" msdata:parentkey="Id" msdata:childkey="UsuInc" msprop:Generator_UserChildTable="Clientes" msprop:Generator_ChildPropName="GetClientesRowsByFK_Clientes_To_UsuarioInc" msprop:Generator_UserRelationName="FK_Clientes_To_UsuarioInc" msprop:Generator_ParentPropName="UsuariosRowByFK_Clientes_To_UsuarioInc" msprop:Generator_RelationVarName="relationFK_Clientes_To_UsuarioInc" msprop:Generator_UserParentTable="Usuarios" />
-      <msdata:Relationship name="FK_Estoque_To_Carros" msdata:parent="Carros" msdata:child="Estoque" msdata:parentkey="Id" msdata:childkey="Carro" msprop:Generator_UserChildTable="Estoque" msprop:Generator_ChildPropName="GetEstoqueRows" msprop:Generator_UserRelationName="FK_Estoque_To_Carros" msprop:Generator_RelationVarName="relationFK_Estoque_To_Carros" msprop:Generator_UserParentTable="Carros" msprop:Generator_ParentPropName="CarrosRow" />
-      <msdata:Relationship name="FK_Locacao_To_Carros" msdata:parent="Carros" msdata:child="Locacao" msdata:parentkey="Id" msdata:childkey="Carro" msprop:Generator_UserChildTable="Locacao" msprop:Generator_ChildPropName="GetLocacaoRows" msprop:Generator_UserRelationName="FK_Locacao_To_Carros" msprop:Generator_RelationVarName="relationFK_Locacao_To_Carros" msprop:Generator_UserParentTable="Carros" msprop:Generator_ParentPropName="CarrosRow" />
-      <msdata:Relationship name="FK_Locacao_To_Clientes" msdata:parent="Clientes" msdata:child="Locacao" msdata:parentkey="Id" msdata:childkey="Cliente" msprop:Generator_UserChildTable="Locacao" msprop:Generator_ChildPropName="GetLocacaoRows" msprop:Generator_UserRelationName="FK_Locacao_To_Clientes" msprop:Generator_RelationVarName="relationFK_Locacao_To_Clientes" msprop:Generator_UserParentTable="Clientes" msprop:Generator_ParentPropName="ClientesRow" />
+      <msdata:Relationship name="FK_Carros_To_UsuarioAlt" msdata:parent="Usuarios" msdata:child="Carros" msdata:parentkey="Id" msdata:childkey="UsuAlt" msprop:Generator_UserChildTable="Carros" msprop:Generator_ChildPropName="GetCarrosRowsByFK_Carros_To_UsuarioAlt" msprop:Generator_UserRelationName="FK_Carros_To_UsuarioAlt" msprop:Generator_RelationVarName="relationFK_Carros_To_UsuarioAlt" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_ParentPropName="UsuariosRowByFK_Carros_To_UsuarioAlt" />
+      <msdata:Relationship name="FK_Carros_To_UsuarioInc" msdata:parent="Usuarios" msdata:child="Carros" msdata:parentkey="Id" msdata:childkey="UsuInc" msprop:Generator_UserChildTable="Carros" msprop:Generator_ChildPropName="GetCarrosRowsByFK_Carros_To_UsuarioInc" msprop:Generator_UserRelationName="FK_Carros_To_UsuarioInc" msprop:Generator_RelationVarName="relationFK_Carros_To_UsuarioInc" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_ParentPropName="UsuariosRowByFK_Carros_To_UsuarioInc" />
+      <msdata:Relationship name="FK_Clientes_To_UsuarioAlt" msdata:parent="Usuarios" msdata:child="Clientes" msdata:parentkey="Id" msdata:childkey="UsuAlt" msprop:Generator_UserChildTable="Clientes" msprop:Generator_ChildPropName="GetClientesRowsByFK_Clientes_To_UsuarioAlt" msprop:Generator_UserRelationName="FK_Clientes_To_UsuarioAlt" msprop:Generator_RelationVarName="relationFK_Clientes_To_UsuarioAlt" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_ParentPropName="UsuariosRowByFK_Clientes_To_UsuarioAlt" />
+      <msdata:Relationship name="FK_Clientes_To_UsuarioInc" msdata:parent="Usuarios" msdata:child="Clientes" msdata:parentkey="Id" msdata:childkey="UsuInc" msprop:Generator_UserChildTable="Clientes" msprop:Generator_ChildPropName="GetClientesRowsByFK_Clientes_To_UsuarioInc" msprop:Generator_UserRelationName="FK_Clientes_To_UsuarioInc" msprop:Generator_RelationVarName="relationFK_Clientes_To_UsuarioInc" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_ParentPropName="UsuariosRowByFK_Clientes_To_UsuarioInc" />
+      <msdata:Relationship name="FK_Estoque_To_Carros" msdata:parent="Carros" msdata:child="Estoque" msdata:parentkey="Id" msdata:childkey="Carro" msprop:Generator_UserChildTable="Estoque" msprop:Generator_ChildPropName="GetEstoqueRows" msprop:Generator_UserRelationName="FK_Estoque_To_Carros" msprop:Generator_ParentPropName="CarrosRow" msprop:Generator_RelationVarName="relationFK_Estoque_To_Carros" msprop:Generator_UserParentTable="Carros" />
+      <msdata:Relationship name="FK_Locacao_To_Carros" msdata:parent="Carros" msdata:child="Locacao" msdata:parentkey="Id" msdata:childkey="Carro" msprop:Generator_UserChildTable="Locacao" msprop:Generator_ChildPropName="GetLocacaoRows" msprop:Generator_UserRelationName="FK_Locacao_To_Carros" msprop:Generator_ParentPropName="CarrosRow" msprop:Generator_RelationVarName="relationFK_Locacao_To_Carros" msprop:Generator_UserParentTable="Carros" />
+      <msdata:Relationship name="FK_Locacao_To_Clientes" msdata:parent="Clientes" msdata:child="Locacao" msdata:parentkey="Id" msdata:childkey="Cliente" msprop:Generator_UserChildTable="Locacao" msprop:Generator_ChildPropName="GetLocacaoRows" msprop:Generator_UserRelationName="FK_Locacao_To_Clientes" msprop:Generator_ParentPropName="ClientesRow" msprop:Generator_RelationVarName="relationFK_Locacao_To_Clientes" msprop:Generator_UserParentTable="Clientes" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataGridViewDoSocorro.Edicao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,13 @@ namespace DataGridViewDoSocorro
                 this.carrosTableAdapter.SetNaoAtivoQuery(carSelect.Id);
                 this.carrosTableAdapter.CustomQuery(parteFinalLocadoraTSQLDataSet.Carros);
             }
+            break;
+                case 1:
+                    {
+                        frmEdicaoCarros editCarro = new frmEdicaoCarros();
+                        editCarro.CarrosRow = carSelect;
+                        editCarro.ShowDialog();
+                    }
             break;
             }
 
