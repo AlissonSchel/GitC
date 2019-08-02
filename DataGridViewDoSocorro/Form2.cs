@@ -1,4 +1,5 @@
-﻿using DataGridViewDoSocorro.Edicao;
+﻿using DataGridViewDoSocorro.Adicionar;
+using DataGridViewDoSocorro.Edicao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,6 +54,27 @@ namespace DataGridViewDoSocorro
             }
 
             
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            frmAddCarro adicionarCarro = new frmAddCarro();
+
+            adicionarCarro.ShowDialog();
+
+            if (adicionarCarro.carrosRow.Nome != null)
+            {
+                this.carrosTableAdapter.Insert(
+                adicionarCarro.carrosRow.Nome,
+                adicionarCarro.carrosRow.Observacao,
+                true,
+                1,
+                1,
+                DateTime.Now,
+                DateTime.Now
+                );
+                this.carrosTableAdapter.CustomQuery(this.parteFinalLocadoraTSQLDataSet.Carros);
+            }            
         }
     }
 }

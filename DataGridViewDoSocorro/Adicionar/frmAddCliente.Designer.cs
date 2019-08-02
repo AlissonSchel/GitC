@@ -87,7 +87,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmAddCliente";
-            this.Text = "frmAddCliente";
+            this.Text = "Adicionar Cliente";
             this.Load += new System.EventHandler(this.FrmAddCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.parteFinalLocadoraTSQLDataSet1)).EndInit();
             this.ResumeLayout(false);

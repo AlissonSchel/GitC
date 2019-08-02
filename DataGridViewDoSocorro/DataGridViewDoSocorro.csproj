@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adicionar\frmAddCarro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAddCarro.Designer.cs">
+      <DependentUpon>frmAddCarro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Adicionar\frmAddCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Adicionar\frmAddCliente.Designer.cs">
       <DependentUpon>frmAddCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicionar\frmAddUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAddUsuario.Designer.cs">
+      <DependentUpon>frmAddUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Edicao\frmEdicaoClientes.cs">
       <SubType>Form</SubType>
@@ -94,6 +106,14 @@
     <Compile Include="Lixeira.Designer.cs">
       <DependentUpon>Lixeira.cs</DependentUpon>
     </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\modelCarro.cs" />
+    <Compile Include="Model\modelUsuario.cs" />
     <Compile Include="ParteFinalLocadoraTSQLDataSet.cs">
       <DependentUpon>ParteFinalLocadoraTSQLDataSet.xsd</DependentUpon>
     </Compile>
@@ -104,8 +124,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Adicionar\frmAddCarro.resx">
+      <DependentUpon>frmAddCarro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Adicionar\frmAddCliente.resx">
       <DependentUpon>frmAddCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicionar\frmAddUsuario.resx">
+      <DependentUpon>frmAddUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edicao\frmEdicaoCarros.resx">
       <DependentUpon>frmEdicaoCarros.cs</DependentUpon>
@@ -127,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lixeira.resx">
       <DependentUpon>Lixeira.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,6 +1,7 @@
 ﻿using DataGridViewDoSocorro.Adicionar;
 using DataGridViewDoSocorro.Edicao;
 using System;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace DataGridViewDoSocorro
@@ -14,6 +15,11 @@ namespace DataGridViewDoSocorro
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            login telaLogin = new login();
+
+          
+
+
             // TODO: This line of code loads data into the 'parteFinalLocadoraTSQLDataSet.Clientes' table. You can move, or remove it, as needed.
             this.clientesTableAdapter.CustomQuery(this.parteFinalLocadoraTSQLDataSet.Clientes);
         }

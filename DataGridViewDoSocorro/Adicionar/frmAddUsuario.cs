@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataGridViewDoSocorro.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,27 +11,21 @@ using System.Windows.Forms;
 
 namespace DataGridViewDoSocorro.Adicionar
 {
-    public partial class frmAddCliente : Form
+    public partial class frmAddUsuario : Form
     {
-        public frmAddCliente()
+        public frmAddUsuario()
         {
             InitializeComponent();
         }
-
-        public string novoCliente;
-
+        public modelUsuario usuariosRow;
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            novoCliente = tbxNome.Text;
-
-            this.clientesTableAdapter1.InsertCliente(novoCliente);
+            usuariosRow = new modelUsuario
+            {
+                Nome = tbxNome.Text
+            };
 
             this.Close();
-        }
-
-        private void FrmAddCliente_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

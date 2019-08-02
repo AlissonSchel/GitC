@@ -1,4 +1,5 @@
-﻿using DataGridViewDoSocorro.Edicao;
+﻿using DataGridViewDoSocorro.Adicionar;
+using DataGridViewDoSocorro.Edicao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,7 +49,22 @@ namespace DataGridViewDoSocorro
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            frmAddUsuario addUsuario = new frmAddUsuario();
 
+            addUsuario.ShowDialog();
+
+            if (!string.IsNullOrEmpty(addUsuario.usuariosRow?.Nome))
+            {
+                this.usuariosTableAdapter.Insert(
+                addUsuario.usuariosRow.Nome,
+                addUsuario.usuariosRow.Ativo,
+                1,
+                1,
+                DateTime.Now,
+                DateTime.Now
+                );
+                this.usuariosTableAdapter.CustomQuery(this.parteFinalLocadoraTSQLDataSet.Usuarios);
+            }
         }
     }
 }
