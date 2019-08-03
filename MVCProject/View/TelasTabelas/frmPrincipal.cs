@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCProject.View.TelasTabelas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,6 +44,20 @@ namespace MVCProject.View
             frmLivros telaLivros = new frmLivros();
 
             telaLivros.ShowDialog();
+        }
+
+        private void LocaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLocacao telaLocacao = new frmLocacao();
+
+            telaLocacao.ShowDialog();
+        }
+
+        private void EditorasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEditoras telaEditoras = new frmEditoras();
+
+            telaEditoras.ShowDialog();
         }
     }
 }

@@ -79,6 +79,12 @@
     <Compile Include="View\Adicionar\frmAddEditora.Designer.cs">
       <DependentUpon>frmAddEditora.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Adicionar\frmAddEditoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAddEditoras.Designer.cs">
+      <DependentUpon>frmAddEditoras.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Adicionar\frmAddGenero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,46 +97,64 @@
     <Compile Include="View\Adicionar\frmAddLivros.Designer.cs">
       <DependentUpon>frmAddLivros.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Adicionar\frmAddLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Adicionar\frmAddLocacao.Designer.cs">
+      <DependentUpon>frmAddLocacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Adicionar\frmAddUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Adicionar\frmAddUsuario.Designer.cs">
       <DependentUpon>frmAddUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmAutores.cs">
+    <Compile Include="View\TelasTabelas\frmAutores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmAutores.Designer.cs">
+    <Compile Include="View\TelasTabelas\frmAutores.Designer.cs">
       <DependentUpon>frmAutores.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmEditora.cs">
+    <Compile Include="View\TelasTabelas\frmEditora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmEditora.Designer.cs">
+    <Compile Include="View\TelasTabelas\frmEditora.Designer.cs">
       <DependentUpon>frmEditora.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmGeneros.cs">
+    <Compile Include="View\TelasTabelas\frmEditoras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmGeneros.Designer.cs">
+    <Compile Include="View\TelasTabelas\frmEditoras.Designer.cs">
+      <DependentUpon>frmEditoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelasTabelas\frmGeneros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelasTabelas\frmGeneros.Designer.cs">
       <DependentUpon>frmGeneros.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmLivros.cs">
+    <Compile Include="View\TelasTabelas\frmLivros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmLivros.Designer.cs">
+    <Compile Include="View\TelasTabelas\frmLivros.Designer.cs">
       <DependentUpon>frmLivros.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmPrincipal.cs">
+    <Compile Include="View\TelasTabelas\frmLocacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmPrincipal.Designer.cs">
+    <Compile Include="View\TelasTabelas\frmLocacao.Designer.cs">
+      <DependentUpon>frmLocacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelasTabelas\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelasTabelas\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmUsuarios.cs">
+    <Compile Include="View\TelasTabelas\frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmUsuarios.Designer.cs">
+    <Compile Include="View\TelasTabelas\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
@@ -151,31 +175,43 @@
     <EmbeddedResource Include="View\Adicionar\frmAddEditora.resx">
       <DependentUpon>frmAddEditora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Adicionar\frmAddEditoras.resx">
+      <DependentUpon>frmAddEditoras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Adicionar\frmAddGenero.resx">
       <DependentUpon>frmAddGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Adicionar\frmAddLivros.resx">
       <DependentUpon>frmAddLivros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Adicionar\frmAddLocacao.resx">
+      <DependentUpon>frmAddLocacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Adicionar\frmAddUsuario.resx">
       <DependentUpon>frmAddUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmAutores.resx">
+    <EmbeddedResource Include="View\TelasTabelas\frmAutores.resx">
       <DependentUpon>frmAutores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmEditora.resx">
+    <EmbeddedResource Include="View\TelasTabelas\frmEditora.resx">
       <DependentUpon>frmEditora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmGeneros.resx">
+    <EmbeddedResource Include="View\TelasTabelas\frmEditoras.resx">
+      <DependentUpon>frmEditoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelasTabelas\frmGeneros.resx">
       <DependentUpon>frmGeneros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmLivros.resx">
+    <EmbeddedResource Include="View\TelasTabelas\frmLivros.resx">
       <DependentUpon>frmLivros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmPrincipal.resx">
+    <EmbeddedResource Include="View\TelasTabelas\frmLocacao.resx">
+      <DependentUpon>frmLocacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelasTabelas\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmUsuarios.resx">
+    <EmbeddedResource Include="View\TelasTabelas\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
