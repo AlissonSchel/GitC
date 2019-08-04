@@ -6465,12 +6465,18 @@ SELECT Id, Nome, Login, Senha, Email, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, Nome, Login, Senha, Email, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM " +
                 "dbo.Usuarios";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT Login, Senha FROM Usuarios WHERE ( Login = @login AND Senha = @senha)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@login", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@senha", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6753,6 +6759,46 @@ SELECT Id, Nome, Login, Senha, Email, Ativo, UsuInc, UsuAlt, DatInc, DatAlt FROM
                     System.DateTime Original_DatInc, 
                     System.DateTime Original_DatAlt) {
             return this.Update(Nome, Login, Senha, Email, Ativo, UsuInc, UsuAlt, DatInc, DatAlt, Original_Id, Original_Nome, Original_Login, Original_Senha, Original_Email, Original_Ativo, Original_UsuInc, Original_UsuAlt, Original_DatInc, Original_DatAlt, Original_Id);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object verificaLogin(string login, string senha) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((login == null)) {
+                throw new global::System.ArgumentNullException("login");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(login));
+            }
+            if ((senha == null)) {
+                throw new global::System.ArgumentNullException("senha");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(senha));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
         }
     }
     

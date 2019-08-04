@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCProject.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,19 @@ namespace MVCProject.View.Adicionar
         public frmAddUsuario()
         {
             InitializeComponent();
+        }
+
+        public Usuario modelUsuario = new Usuario();
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            modelUsuario = new Usuario
+            {
+                Nome = txbNome.Text,
+                Email = txbEmail.Text,
+                Login = txbLogin.Text,
+                Senha = txbSenha.Text
+            };
         }
     }
 }
