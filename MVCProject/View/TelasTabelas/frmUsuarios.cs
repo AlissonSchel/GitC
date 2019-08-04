@@ -35,6 +35,21 @@ namespace MVCProject.View
             frmAddUsuario telaAddUsuario = new frmAddUsuario();
 
             telaAddUsuario.ShowDialog();
+
+            if (!string.IsNullOrEmpty(telaAddUsuario.modelUsuario?.Nome))
+            {
+                this.usuariosTableAdapter.Insert(
+                    telaAddUsuario.modelUsuario.Nome,
+                    telaAddUsuario.modelUsuario.Login,
+                    telaAddUsuario.modelUsuario.Email,
+                    telaAddUsuario.modelUsuario.Senha,
+                    telaAddUsuario.modelUsuario.Ativo,
+                    telaAddUsuario.modelUsuario.UsuAlt,
+                    telaAddUsuario.modelUsuario.UsuInc,
+                    telaAddUsuario.modelUsuario.DatAlt,
+                    telaAddUsuario.modelUsuario.DatInc
+                    );
+            }
         }
     }
 }
