@@ -30,6 +30,15 @@ namespace MVCProject.View
             frmAddAutores telaAddAutores = new frmAddAutores();
 
             telaAddAutores.ShowDialog();
+
+            if (!string.IsNullOrEmpty(telaAddAutores.modelAutores?.Nome))
+            {
+                this.autoresTableAdapter.Insert(
+                    telaAddAutores.modelAutores.Nome,
+                    telaAddAutores.modelAutores.Descicao
+                    );
+                this.autoresTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Autores);
+            }
         }
     }
 }

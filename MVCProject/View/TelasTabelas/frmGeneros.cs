@@ -30,6 +30,15 @@ namespace MVCProject.View
             frmAddGenero telaAddGenero = new frmAddGenero();
 
             telaAddGenero.ShowDialog();
+
+            if (!string.IsNullOrEmpty(telaAddGenero.modelGenero?.Tipo))
+            {
+                this.generosTableAdapter.Insert(
+                telaAddGenero.modelGenero.Tipo,
+                telaAddGenero.modelGenero.Descricao
+                );
+                this.generosTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Generos);
+            }
         }
     }
 }

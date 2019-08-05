@@ -81,32 +81,36 @@
             // 
             // txbEmail
             // 
+            this.txbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
             this.txbEmail.Location = new System.Drawing.Point(53, 39);
-            this.txbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(170, 20);
             this.txbEmail.TabIndex = 4;
             // 
             // txbNome
             // 
+            this.txbNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
             this.txbNome.Location = new System.Drawing.Point(53, 5);
-            this.txbNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbNome.Margin = new System.Windows.Forms.Padding(2);
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(170, 20);
             this.txbNome.TabIndex = 4;
             // 
             // txbLogin
             // 
+            this.txbLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
             this.txbLogin.Location = new System.Drawing.Point(53, 74);
-            this.txbLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbLogin.Margin = new System.Windows.Forms.Padding(2);
             this.txbLogin.Name = "txbLogin";
             this.txbLogin.Size = new System.Drawing.Size(170, 20);
             this.txbLogin.TabIndex = 4;
             // 
             // txbSenha
             // 
+            this.txbSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
             this.txbSenha.Location = new System.Drawing.Point(53, 109);
-            this.txbSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbSenha.Margin = new System.Windows.Forms.Padding(2);
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.PasswordChar = '*';
             this.txbSenha.Size = new System.Drawing.Size(170, 20);
@@ -114,20 +118,25 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(78)))), ((int)(((byte)(29)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(43)))), ((int)(((byte)(33)))));
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(35, 174);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 41);
             this.button1.TabIndex = 5;
             this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // frmAddUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(210)))), ((int)(((byte)(184)))));
             this.ClientSize = new System.Drawing.Size(245, 248);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txbNome);
@@ -138,7 +147,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmAddUsuario";
             this.Text = "Adicionar Usuário";
             this.ResumeLayout(false);

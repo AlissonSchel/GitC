@@ -8,13 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MVCProject.View.Adicionar
+namespace MVCProject.View.Editar
 {
-    public partial class frmAddEditora : Form
+    public partial class frmEditUsuario : Form
     {
-        public frmAddEditora()
+        public frmEditUsuario()
         {
             InitializeComponent();
+        }
+
+        public MVCProject.SistemaBibliotecaDBDataSet.UsuariosRow UsuariosRow;
+
+        private void FrmEditUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

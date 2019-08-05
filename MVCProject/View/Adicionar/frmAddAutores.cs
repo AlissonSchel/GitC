@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCProject.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace MVCProject.View.Adicionar
         public frmAddAutores()
         {
             InitializeComponent();
+        }
+
+        public Autor modelAutores = new Autor();
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            modelAutores = new Autor
+            {
+                Nome = txbNome.Text,
+                Descicao = txbDescricao.Text
+            };
+            this.Close();
         }
     }
 }

@@ -22,7 +22,6 @@ namespace MVCProject.View.TelasTabelas
         {
             // TODO: esta linha de código carrega dados na tabela 'sistemaBibliotecaDBDataSet.Editoras'. Você pode movê-la ou removê-la conforme necessário.
             this.editorasTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Editoras);
-
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -30,6 +29,15 @@ namespace MVCProject.View.TelasTabelas
             frmAddEditoras telaAddEditoras = new frmAddEditoras();
 
             telaAddEditoras.ShowDialog();
+
+            if (!string.IsNullOrEmpty(telaAddEditoras.modelEditora?.Nome))
+            {
+                this.editorasTableAdapter.Insert(
+                telaAddEditoras.modelEditora.Nome,
+                telaAddEditoras.modelEditora.Descricao
+                );
+                this.editorasTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Editoras);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MVCProject.View.Adicionar;
+using MVCProject.View.Editar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,25 @@ namespace MVCProject.View
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            var usuarioLocacao = ((System.Data.DataRowView)this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row as MVCProject.SistemaBibliotecaDBDataSet.UsuariosRow;
 
+            switch (e.ColumnIndex)
+            {
+                case 0:
+                    {
+                        this.usuariosTableAdapter.SetNaoAtivoQuery(usuarioLocacao.Id);
+                        this.usuariosTableAdapter.SelectAtivos(sistemaBibliotecaDBDataSet.Usuarios);
+                    }
+                    break;
+                case 1:
+                    {
+                        frmEditUsuario telaEditarLocacao = new frmEditUsuario();
+                        telaEditarLocacao.UsuariosRow = usuarioLocacao;
+                        telaEditarLocacao.ShowDialog();
+                        this.usuariosTableAdapter.SelectAtivos(this.sistemaBibliotecaDBDataSet.Usuarios);
+                    }
+                    break;
+            }
         }
 
         private void Button1_Click(object sender, EventArgs e)

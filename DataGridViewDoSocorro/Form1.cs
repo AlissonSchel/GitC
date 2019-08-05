@@ -64,6 +64,7 @@ namespace DataGridViewDoSocorro
                         frmEdicaoClientes editCliente = new frmEdicaoClientes();
                         editCliente.ClientesRow = clientSelect;
                         editCliente.ShowDialog();
+                        this.clientesTableAdapter.CustomQuery(parteFinalLocadoraTSQLDataSet.Clientes);
                     }
                     break;
             }

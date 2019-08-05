@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCProject.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +17,15 @@ namespace MVCProject.View.Adicionar
         {
             InitializeComponent();
         }
-
+        public Editora modelEditora = new Editora();
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            modelEditora = new Editora
+            {
+                Nome = txbNome.Text,
+                Descricao = txbDescricao.Text
+            };
+            this.Close();
         }
     }
 }

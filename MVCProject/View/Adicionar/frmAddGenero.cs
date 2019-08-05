@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCProject.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace MVCProject.View.Adicionar
         public frmAddGenero()
         {
             InitializeComponent();
+        }
+        public Genero modelGenero = new Genero();
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            modelGenero = new Genero
+            {
+                Tipo = txbTipo.Text,
+                Descricao = txbDescricao.Text
+            };
+            this.Close();
         }
     }
 }
