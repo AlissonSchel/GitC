@@ -1,4 +1,5 @@
 ﻿using MVCProject.View.Adicionar;
+using MVCProject.View.Editar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,6 +40,24 @@ namespace MVCProject.View
                     );
                 this.autoresTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Autores);
             }
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var autorSelect = ((System.Data.DataRowView)this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row as MVCProject.SistemaBibliotecaDBDataSet.AutoresRow;
+
+            switch (e.ColumnIndex)
+            {
+                case 0:
+                    {
+                        frmEditAutores telaEditAutor = new frmEditAutores();
+                        telaEditAutor.AutoresRow = autorSelect;
+                        telaEditAutor.ShowDialog();
+                        this.autoresTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Autores);
+                    }
+                    break;
+            }
+
         }
     }
 }

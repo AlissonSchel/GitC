@@ -59,5 +59,21 @@ namespace MVCProject.View
 
             telaEditoras.ShowDialog();
         }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString("hh:mm:ss");
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            label2.Text = "Olá " + telaLogin.nomeUsuario + ". Seja bem-vindo(a)!";
+        }
+
+        private void SairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

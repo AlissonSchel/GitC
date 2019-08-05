@@ -1,4 +1,5 @@
 ﻿using MVCProject.View.Adicionar;
+using MVCProject.View.Editar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,23 @@ namespace MVCProject.View.TelasTabelas
                 telaAddEditoras.modelEditora.Descricao
                 );
                 this.editorasTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Editoras);
+            }
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var EditoraSelect = ((System.Data.DataRowView)this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row as MVCProject.SistemaBibliotecaDBDataSet.EditorasRow;
+
+            switch (e.ColumnIndex)
+            {
+                case 0:
+                    {
+                        frmEditEditora telaEditarEditora = new frmEditEditora();
+                        telaEditarEditora.EditorasRow = EditoraSelect;
+                        telaEditarEditora.ShowDialog();
+                        this.editorasTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Editoras);
+                    }
+                    break;
             }
         }
     }

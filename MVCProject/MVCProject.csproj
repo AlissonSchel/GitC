@@ -60,6 +60,7 @@
     <Compile Include="Model\Livro.cs" />
     <Compile Include="Model\LivroAutor.cs" />
     <Compile Include="Model\Locacao.cs" />
+    <Compile Include="Model\Session.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,6 +113,24 @@
     </Compile>
     <Compile Include="View\Adicionar\frmAddUsuario.Designer.cs">
       <DependentUpon>frmAddUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Editar\frmEditAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Editar\frmEditAutores.Designer.cs">
+      <DependentUpon>frmEditAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Editar\frmEditEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Editar\frmEditEditora.Designer.cs">
+      <DependentUpon>frmEditEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Editar\frmEditGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Editar\frmEditGenero.Designer.cs">
+      <DependentUpon>frmEditGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Editar\frmEditLivros.cs">
       <SubType>Form</SubType>
@@ -205,6 +224,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Adicionar\frmAddUsuario.resx">
       <DependentUpon>frmAddUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Editar\frmEditAutores.resx">
+      <DependentUpon>frmEditAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Editar\frmEditEditora.resx">
+      <DependentUpon>frmEditEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Editar\frmEditGenero.resx">
+      <DependentUpon>frmEditGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Editar\frmEditLivros.resx">
       <DependentUpon>frmEditLivros.cs</DependentUpon>

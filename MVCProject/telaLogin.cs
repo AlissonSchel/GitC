@@ -23,7 +23,7 @@ namespace MVCProject
 
         public bool isLogged { get; set; } = false;
 
-        public string nomeUsuario { get; set; }
+        public static string nomeUsuario { get; set; }
 
         public Usuario modelUsuario = new Usuario();
 

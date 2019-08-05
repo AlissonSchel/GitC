@@ -29,7 +29,6 @@ namespace MVCProject
 
             if (telalogin.isLogged == true)
             {
-                MessageBox.Show($"Bem-vindo(a) {telalogin.nomeUsuario}!");
                 telaPrincipal.ShowDialog();
             }
         }

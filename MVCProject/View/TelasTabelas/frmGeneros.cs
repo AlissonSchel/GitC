@@ -1,4 +1,5 @@
 ﻿using MVCProject.View.Adicionar;
+using MVCProject.View.Editar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,23 @@ namespace MVCProject.View
                 telaAddGenero.modelGenero.Descricao
                 );
                 this.generosTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Generos);
+            }
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var generoSelect = ((System.Data.DataRowView)this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row as MVCProject.SistemaBibliotecaDBDataSet.GenerosRow;
+
+            switch (e.ColumnIndex)
+            {
+                case 0:
+                    {
+                        frmEditGenero telaEditGenero = new frmEditGenero();
+                        telaEditGenero.GenerosRow = generoSelect;
+                        telaEditGenero.ShowDialog();
+                        this.generosTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Generos);
+                    }
+                    break;
             }
         }
     }

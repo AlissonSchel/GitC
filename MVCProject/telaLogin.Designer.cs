@@ -45,9 +45,10 @@
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(43)))), ((int)(((byte)(33)))));
             this.btnLogin.FlatAppearance.BorderSize = 3;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Location = new System.Drawing.Point(149, 131);
+            this.btnLogin.Location = new System.Drawing.Point(199, 161);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(204, 52);
+            this.btnLogin.Size = new System.Drawing.Size(272, 64);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -56,37 +57,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(235, 31);
+            this.label1.Location = new System.Drawing.Point(313, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(43, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Login";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(232, 74);
+            this.label2.Location = new System.Drawing.Point(309, 91);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Senha";
             // 
             // txbLogin
             // 
             this.txbLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
-            this.txbLogin.Location = new System.Drawing.Point(172, 47);
+            this.txbLogin.Location = new System.Drawing.Point(229, 58);
+            this.txbLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbLogin.Name = "txbLogin";
-            this.txbLogin.Size = new System.Drawing.Size(160, 20);
+            this.txbLogin.Size = new System.Drawing.Size(212, 22);
             this.txbLogin.TabIndex = 2;
             // 
             // txbSenha
             // 
             this.txbSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
-            this.txbSenha.Location = new System.Drawing.Point(172, 90);
+            this.txbSenha.Location = new System.Drawing.Point(229, 111);
+            this.txbSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.PasswordChar = '*';
-            this.txbSenha.Size = new System.Drawing.Size(160, 20);
+            this.txbSenha.Size = new System.Drawing.Size(212, 22);
             this.txbSenha.TabIndex = 2;
+            this.txbSenha.UseSystemPasswordChar = true;
             // 
             // usuariosTableAdapter1
             // 
@@ -99,16 +105,17 @@
             // 
             // telaLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(210)))), ((int)(((byte)(184)))));
-            this.ClientSize = new System.Drawing.Size(500, 263);
+            this.ClientSize = new System.Drawing.Size(667, 324);
             this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.txbLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "telaLogin";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.sistemaBibliotecaDBDataSet1)).EndInit();
