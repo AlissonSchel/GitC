@@ -48,11 +48,12 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(78)))), ((int)(((byte)(29)))));
+            this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(43)))), ((int)(((byte)(33)))));
             this.button1.FlatAppearance.BorderSize = 3;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(35, 388);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
@@ -64,7 +65,8 @@
             // 
             // txbDescricao
             // 
-            this.txbDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
+            this.txbDescricao.BackColor = System.Drawing.Color.Black;
+            this.txbDescricao.ForeColor = System.Drawing.Color.White;
             this.txbDescricao.Location = new System.Drawing.Point(12, 136);
             this.txbDescricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbDescricao.Name = "txbDescricao";
@@ -74,7 +76,8 @@
             // 
             // txbNome
             // 
-            this.txbNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
+            this.txbNome.BackColor = System.Drawing.Color.Black;
+            this.txbNome.ForeColor = System.Drawing.Color.White;
             this.txbNome.Location = new System.Drawing.Point(46, 65);
             this.txbNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbNome.Name = "txbNome";
@@ -98,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(210)))), ((int)(((byte)(184)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(366, 501);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);

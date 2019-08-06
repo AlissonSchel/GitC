@@ -22,7 +22,7 @@ namespace MVCProject.View.TelasTabelas
         private void FrmLocacao_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'sistemaBibliotecaDBDataSet.Locacao'. Você pode movê-la ou removê-la conforme necessário.
-            this.locacaoTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Locacao);
+            this.locacaoTableAdapter.SelectAtivos(this.sistemaBibliotecaDBDataSet.Locacao);
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)

@@ -51,13 +51,15 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(78)))), ((int)(((byte)(29)))));
+            this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(43)))), ((int)(((byte)(33)))));
             this.button1.FlatAppearance.BorderSize = 3;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(59, 213);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(79, 262);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(297, 56);
+            this.button1.Size = new System.Drawing.Size(396, 69);
             this.button1.TabIndex = 0;
             this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = false;
@@ -66,9 +68,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(190, 18);
+            this.label1.Location = new System.Drawing.Point(253, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.Size = new System.Drawing.Size(39, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Livro";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,9 +79,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(183, 61);
+            this.label2.Location = new System.Drawing.Point(244, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(57, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Usuario";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,9 +90,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(190, 107);
+            this.label3.Location = new System.Drawing.Point(253, 132);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.Size = new System.Drawing.Size(36, 17);
             this.label3.TabIndex = 1;
             this.label3.Text = "Tipo";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,25 +101,29 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(175, 151);
+            this.label4.Location = new System.Drawing.Point(233, 186);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
+            this.label4.Size = new System.Drawing.Size(75, 17);
             this.label4.TabIndex = 1;
             this.label4.Text = "Devolução";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // boxLivro
             // 
-            this.boxLivro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
+            this.boxLivro.BackColor = System.Drawing.Color.Black;
             this.boxLivro.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.livrosBindingSource, "Titulo", true));
             this.boxLivro.DataSource = this.livrosBindingSource;
             this.boxLivro.DisplayMember = "Titulo";
+            this.boxLivro.ForeColor = System.Drawing.Color.White;
             this.boxLivro.FormattingEnabled = true;
-            this.boxLivro.Location = new System.Drawing.Point(83, 34);
+            this.boxLivro.Location = new System.Drawing.Point(111, 42);
+            this.boxLivro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.boxLivro.Name = "boxLivro";
-            this.boxLivro.Size = new System.Drawing.Size(249, 21);
+            this.boxLivro.Size = new System.Drawing.Size(331, 24);
             this.boxLivro.TabIndex = 2;
             this.boxLivro.ValueMember = "Id";
+            this.boxLivro.SelectedIndexChanged += new System.EventHandler(this.BoxLivro_SelectedIndexChanged);
             // 
             // livrosBindingSource
             // 
@@ -132,16 +141,19 @@
             // 
             // boxUsuario
             // 
-            this.boxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
+            this.boxUsuario.BackColor = System.Drawing.Color.Black;
             this.boxUsuario.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.usuariosBindingSource, "Id", true));
             this.boxUsuario.DataSource = this.usuariosBindingSource;
             this.boxUsuario.DisplayMember = "Nome";
+            this.boxUsuario.ForeColor = System.Drawing.Color.White;
             this.boxUsuario.FormattingEnabled = true;
-            this.boxUsuario.Location = new System.Drawing.Point(83, 77);
+            this.boxUsuario.Location = new System.Drawing.Point(111, 95);
+            this.boxUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.boxUsuario.Name = "boxUsuario";
-            this.boxUsuario.Size = new System.Drawing.Size(249, 21);
+            this.boxUsuario.Size = new System.Drawing.Size(331, 24);
             this.boxUsuario.TabIndex = 2;
             this.boxUsuario.ValueMember = "Id";
+            this.boxUsuario.SelectedIndexChanged += new System.EventHandler(this.BoxUsuario_SelectedIndexChanged);
             // 
             // usuariosBindingSource
             // 
@@ -156,25 +168,29 @@
             // 
             this.dtpDevolucao.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
             this.dtpDevolucao.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
-            this.dtpDevolucao.Location = new System.Drawing.Point(106, 169);
+            this.dtpDevolucao.Location = new System.Drawing.Point(141, 208);
+            this.dtpDevolucao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpDevolucao.Name = "dtpDevolucao";
-            this.dtpDevolucao.Size = new System.Drawing.Size(200, 20);
+            this.dtpDevolucao.Size = new System.Drawing.Size(265, 22);
             this.dtpDevolucao.TabIndex = 4;
             // 
             // numTipo
             // 
-            this.numTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(119)))), ((int)(((byte)(93)))));
-            this.numTipo.Location = new System.Drawing.Point(144, 123);
+            this.numTipo.BackColor = System.Drawing.Color.Black;
+            this.numTipo.ForeColor = System.Drawing.Color.White;
+            this.numTipo.Location = new System.Drawing.Point(192, 151);
+            this.numTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numTipo.Name = "numTipo";
-            this.numTipo.Size = new System.Drawing.Size(120, 20);
+            this.numTipo.Size = new System.Drawing.Size(160, 22);
             this.numTipo.TabIndex = 5;
+            this.numTipo.ValueChanged += new System.EventHandler(this.NumTipo_ValueChanged);
             // 
             // frmAddLocacao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(210)))), ((int)(((byte)(184)))));
-            this.ClientSize = new System.Drawing.Size(412, 295);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(549, 363);
             this.Controls.Add(this.numTipo);
             this.Controls.Add(this.dtpDevolucao);
             this.Controls.Add(this.boxUsuario);
@@ -185,6 +201,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmAddLocacao";
             this.Text = "Locacao";

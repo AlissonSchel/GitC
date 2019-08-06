@@ -21,8 +21,8 @@ namespace MVCProject.View
 
         private void FrmLivros_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'sistemaBibliotecaDBDataSet.Livros' table. You can move, or remove it, as needed.
-            this.livrosTableAdapter.SelectAtivos(this.sistemaBibliotecaDBDataSet.Livros);
+            // TODO: This line of code loads data into the 'sistemaBibliotecaDBDataSet3.Livros' table. You can move, or remove it, as needed.
+            this.livrosTableAdapter.FillBy(this.sistemaBibliotecaDBDataSet3.Livros);
         }
 
         private void Button1_Click(object sender, EventArgs e)

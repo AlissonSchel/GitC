@@ -40,5 +40,20 @@ namespace MVCProject.View.Adicionar
             };
             this.Close();
         }
+
+        private void BoxLivro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BoxUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NumTipo_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
