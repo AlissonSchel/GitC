@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="CalculadoraWPF.Views.ucLogin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CalculadoraWPF.Views"
+             mc:Ignorable="d" 
+             MinHeight="530" MaxHeight="800" MinWidth="548.933" MaxWidth="1200" Width="355.733">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="109*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button" Content="Entrar" Margin="156,414,155.8,0" VerticalAlignment="Top" Height="64" Grid.ColumnSpan="3" Click="Button_Click"/>
+        <PasswordBox x:Name="tbxSenha" Margin="37,307,36.8,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="44" FontSize="32"/>
+        <TextBox x:Name="tbxLogin" Height="44" Margin="37,180,36.8,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Grid.ColumnSpan="3"/>
+        <Label x:Name="label" Content="LOGIN" Margin="0.4,129,1.2,0" FontSize="32" Height="53" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="label_Copy" Content="SENHA" Margin="0.4,256,1.2,0" VerticalAlignment="Top" Height="51" FontSize="32" Grid.Column="1"/>
+    </Grid>
+</UserControl>
