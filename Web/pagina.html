@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        body {
+            background-image: url("gif1.gif");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #btnClickMe {
+            width: 300px;
+            height: 150px;
+            border-radius:10px 10px;
+            background-color:#ff0000;
+            border-color:#00FFFF;
+            border-width:10px;
+            border-style:ridge;
+            font-size:26px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        div {
+            text-align:center;
+            width:100%;
+            height:100%;
+            position:relative;
+        }
+        .esferasDeGiomar {
+            width: 100px;
+            height: 100px;
+            background-image:url("doom.png");
+            background-repeat: no-repeat;
+            background-size:contain;
+            position: fixed;
+        }
+        #lblGiomarBallCount {
+            color:#ffffff;
+            font-size: 32px;
+            border-color: #790000;
+            background-color: black;
+        }
+        #area {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="button" value="Clieck Me!!!" onclick="CriarGiomar()" id="btnClickMe" />
+        <br /><br />
+        <label id="lblGiomarBallCount"> Contador de esferas do giomar: 0</label>
+        <br />
+    </div>
+    <div id="area">
+        <div incrementleft="true" incrementtop="true" posleft="0" postop="0" id="GilmarBalls" class="esferasDeGiomar"></div>
+    </div>
+    <script>
+        setInterval(Movimento, 1);
+        function Movimento() {
+            //Obtem esferas dentro do documento
+            var esferasGiomar = document.getElementsByClassName('esferasDeGiomar');
+
+            for (var i = 0; i < esferasGiomar.length; i++) {
+                //Função para movimentar as esferas
+                MovimentX(esferasGiomar[i]);
+            }
+        }
+
+        function MovimentX(object) {
+            var posLeft = object.getAttribute("posleft");
+            var posTop = object.getAttribute("postop");
+
+            var incrementLeft = object.getAttribute("incrementleft");
+            var incrementTop = object.getAttribute("incrementtop");
+            var idElement = object.getAttribute("id");
+
+            if (posLeft < 500 && incrementLeft == "true") {
+                for (var i = 0; i < 3; i++)
+                    posLeft++
+                object.style.left = (posLeft).toString() + "px";
+            } else {
+                for (var i = 0; i < 3; i++) {
+                    posLeft--
+                }
+                object.style.left = (posLeft).toString() + "px";
+                incrementLeft = false;
+                if (posLeft <= 0)
+                    incrementLeft = true;
+            }
+
+            if (posTop < 500 && incrementTop == "true") {
+                for (var i = 0; i < 3; i++)
+                    posTop++
+                object.style.top = (posTop).toString() + "px";
+            } else {
+                for (var i = 0; i < 3; i++)
+                    posTop--
+                object.style.top = (posTop).toString() + "px";
+                incrementTop = false;
+                if (posTop <= 0)
+                    incrementTop = true;
+            }
+            document.getElementById(idElement).setAttribute("postop", posTop);
+            document.getElementById(idElement).setAttribute("incrementtop", incrementTop);
+
+            document.getElementById(idElement).setAttribute("posleft", posLeft);
+            document.getElementById(idElement).setAttribute("incrementleft", incrementLeft);
+        }
+
+        function CriarGiomar() {
+            var elementDoc = document.getElementsByClassName('screen')[0];
+            var elementLbl = document.getElementById('lblGiomarBallCount');
+            var esferasGiomar = document.getElementsByClassName('esferasDeGiomar').length;
+
+            elementDoc.innerHTML += "<div id="+esferasGiomar+" incrementleft=\"true\" posleft=\"0\" class=\"esferasDeGiomar\"></div>"
+            elementLbl.innerHTML = "Contador de esferas do giomar: " + esferasGiomar;
+        }
+    </script>
+</body>
+</html>
