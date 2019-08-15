@@ -1,0 +1,63 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Projeto web</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <div>
+        <h1>Pesquisar Usuários:</h1>
+        <form id="formUsu" method="post">
+            <input type="text" id="idUsuario" name="txbUsuario" placeholder="ID do Usuário">
+            <input id="pesquisar" type="button" value="Pesquisar">
+        </form>
+    </div>
+    <br /><br />
+    <div>
+        <form id="formUsu" method="post">
+            <input type="text" id="usuario" name="usuario" placeholder="USUÁRIO">
+        </form>
+    </div>
+    <br /><br />
+    <h1>Cadastrar Novos Usuários:</h1>
+    <form id="saveContactorm" method="post">
+        <input type="text" placeholder="USUÁRIO" name="Usuario" id="Usuario" />
+        <input type="submit" value="Cadastrar" id="saveContact" />
+    </form>
+
+    <div id="exemplo">
+
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.columns.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#pesquisar").click(function () {
+                $.getJSON("http://localhost:62299/api/Usuarios/" + idUsuario.value, function (data) {
+                    if (data.Id != null) {
+                        $('#usuario').val(data.Usuario1);
+                    } else {
+                        $('#usuario').val('...Error...');
+                    }
+
+                });
+            });
+        });
+
+        $('#saveContact').click(function () {
+            $.post("http://localhost:62299/api/Usuarios",
+                $("#saveContactForm").serialize()
+            );
+        });
+
+
+        function GridReflesh() {
+            $.get('http://localhost:62299/api/Values', function (dataApi) {
+                $('#exemplo').columns({ data: dataApi });
+            });
+        }
+    </script>
+</body>
+</html>
