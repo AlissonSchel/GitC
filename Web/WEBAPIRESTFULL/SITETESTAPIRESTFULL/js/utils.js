@@ -36,6 +36,7 @@ jQuery(document).ready(function () {
 
 function SetGridClickEvents() {
     $('.btn-delet-event').click(function () {
+        var deletOk = false;
         var id = $(this).attr('value');
         var sendpost = $(this).attr('send-post');
 
@@ -49,9 +50,11 @@ function SetGridClickEvents() {
             }
         }
 
-        $.ajax(settings).done(function (response) {
-            GetMethod(null);
-        });
+        if (confirm("Deseja excluir o registro?")) {
+            $.ajax(settings).done(function (response) {
+                GetMethod(null);
+            });
+        }
     });
 
     $('.btn-editing-event').click(function () {

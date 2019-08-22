@@ -127,9 +127,32 @@ function Deleting(id) {
         }
     }
 
-    $.ajax(settings).done(function (response) {
-        GetMethod();
+    if (confirm("Deseja excluir o registro?")) {
+        $.ajax(settings).done(function (response) {
+            GetMethod();
+        });
+    }
+    
+}
+
+function translateEditora(id){
+    var settings = {
+        "async": false,
+        "crossDomain": true,
+        "url": "http://localhost:59271/Api/Editora",
+        "method": "GET",
+        "headers": {
+            "Content-Type": "application/json",
+            "Accept": "*/*"
+        }
+    }
+    $.ajax(settings).done(function (value) {
+        if(id == value.Id) {
+            var retorno = value.Nome;
+        }
+        return retorno;
     });
+    
 }
 
 function GetMethod() {
@@ -175,7 +198,7 @@ function RefreshGrid(contentValue) {
             + '<td>' + value.Registro + '</td>'
             + '<td>' + value.Isbn + '</td>'
             + '<td>' + value.Genero + '</td>'
-            + '<td>' + value.Editora + '</td>'
+            + '<td>' + translateEditora(value.Editora) + '</td>'
             + '<td>' + value.Sinopse + '</td>'
             + '<td>' + value.Observacoes + '</td>'
             + '<td>' + value.Ativo + '</td>'
