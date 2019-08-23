@@ -1,0 +1,67 @@
+﻿@model WebMVCApp.Models.Carro
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Carro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Placa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Placa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuInc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuInc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuAlt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuAlt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatInc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatInc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatAlt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatAlt)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
